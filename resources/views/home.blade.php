@@ -100,11 +100,8 @@
   </section>
 
   <!-- Halaman About Us -->
-<section class="bg-white w-full h-auto flex items-center justify-center">
-    <div class="columns-3xs">
-        <img class="" src="" alt="">
-        <img class="" src="" alt="">
-        <img class="" src="" alt="">
+<section class="relative bg-[#2C3930] w-full h-auto py-12">
+    <div class="">
     </div>
 </section>
 
