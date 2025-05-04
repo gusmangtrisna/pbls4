@@ -107,7 +107,7 @@
 
   <!-- Halaman Location -->
 <section>
-  <div class="relative py-36 bg-white pl-16">
+  <div class="relative py-36 bg-white pl-16 ">
     <div data-aos="fade-right" data-aos-duration="1000" class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-10">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3947.3288897587527!2d115.46082177473353!3d-8.369272284368671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd21db916c3b987%3A0x9edfee0513c3844!2sTaman%20Edelweis%20Bali!5e0!3m2!1sid!2sid!4v1742812282075!5m2!1sid!2sid"
@@ -148,6 +148,7 @@
     </div>
   </div>
 </section>
+
   <!-- Halaman Harga Tiket -->
   <div class="flex justify-center">
     <h1 class="text-5xl text-[#2C3930] text-center font-semibold max-w-2xl text-pretty tracking-tight">
@@ -184,13 +185,49 @@
   </div>
 
   <!-- Chatbot -->
-  <a href="#"
-    class="fixed bottom-8 right-8 bg-[#2C3930] hover:bg-[#364c3d] text-white p-4 rounded-full shadow-lg transition duration-300 ease-in-out z-50"
-    aria-label="Chatbot">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
-      </svg>
-    </a>
+   <div>
+    <a href="#"
+      class="fixed bottom-8 right-8 bg-[#2C3930] hover:bg-[#364c3d] text-white p-4 rounded-full shadow-lg transition duration-300 ease-in-out z-50"
+      aria-label="Chatbot">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+        </svg>
+      </a>
+    </div>
+
+<!-- Halaman Gallery -->
+    <div class="max-w-7xl mx-auto px-4 py-8 mb-24">
+      <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-3 space-y-4">
+          @foreach ([
+            'gallery2.svg',
+              'gallery3.svg',
+              'gallery4.svg',
+              'gallery5.svg',
+              'gallery6.svg',
+              'gallery1.svg',
+              'gallery2.svg',
+              'gallery3.svg',
+              'gallery5.svg',
+              'gallery2.svg',
+              'gallery3.svg',
+              'gallery4.svg',
+              'gallery5.svg',
+              'gallery6.svg',
+              'gallery1.svg',
+              'gallery2.svg',
+              'gallery3.svg',
+              'gallery5.svg',
+              'gallery5.svg',
+          ] as $image)
+              <div class="break-inside-avoid overflow-hidden shadow hover:shadow-lg transition">
+                  <img src="{{ asset('images/gallery/' . $image) }}"
+                      alt="Galeri"
+                      class="w-full h-auto block hover:scale-110 transition-transform duration-700">
+              </div>
+          @endforeach
+        </div>
+    </div>
+
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
