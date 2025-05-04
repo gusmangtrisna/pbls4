@@ -1,16 +1,19 @@
 <header class="fixed inset-x-0 top-0 z-50 backdrop-blur-sm">
-    <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <nav class="flex items-center justify-between p-6 lg:px-14" aria-label="Global">
       <div class="flex lg:flex-1">
         <a href="#" class="-m-1.5 p-1.5">
           <span class="sr-only">DANI PINGGE</span>
-          <img class="h-10 w-auto" src="/images/logo.svg" alt="">
+            <div class="flex">
+                <img class="h-12 w-auto" src="/images/logo.svg" alt="">
+                <h1 class="text-[18px] text-[#2C3930] px-4 font-bold">TAMAN <br /> EDELWEIS</h1>
+            </div>
         </a>
       </div>
       <div class="flex lg:hidden">
         <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
           <span class="sr-only">Open main menu</span>
           <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
           </svg>
         </button>
       </div>
@@ -22,7 +25,9 @@
         <a href="#" class="text-sb/6 font-semibold relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-green-950 after:transition-all after:duration-300 hover:after:w-full"">Galery</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="/login" class="text-sb/6 font-semibold text-[#2C3930] relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-green-950 after:transition-all after:duration-300 hover:after:w-full"">Log in <span aria-hidden="true">&rarr;</span></a>
+        <a href="/login" class="text-sb/6 font-semibold text-[#2C3930] relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-green-950 after:transition-all after:duration-300 hover:after:w-full"">Login</a>
+        <div class="w-px h-6 bg-[#2C3930] mx-2"></div>
+        <a href="/register" class="text-sb/6 font-semibold text-[#2C3930] relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-green-950 after:transition-all after:duration-300 hover:after:w-full"">Register</a>
       </div>
     </nav>
     <!-- Mobile menu, show/hide based on menu open state. -->
