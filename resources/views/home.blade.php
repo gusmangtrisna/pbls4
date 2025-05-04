@@ -197,7 +197,7 @@
 
 <!-- Halaman Gallery -->
     <div class="max-w-7xl mx-auto px-4 py-8 mb-24">
-      <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-3 space-y-4">
+      <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-3 space-y-3">
           @foreach ([
             'gallery2.svg',
               'gallery3.svg',
@@ -222,7 +222,7 @@
               <div class="break-inside-avoid overflow-hidden shadow hover:shadow-lg transition">
                   <img src="{{ asset('images/gallery/' . $image) }}"
                       alt="Galeri"
-                      class="w-full h-auto block hover:scale-110 transition-transform duration-700">
+                      class="w-full h-auto block hover:scale-105 transition-transform duration-700">
               </div>
           @endforeach
         </div>
