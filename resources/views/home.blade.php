@@ -101,7 +101,14 @@
 
   <!-- Halaman About Us -->
 <section class="relative bg-[#2C3930] w-full h-auto py-12">
-    <div class="">
+    <div class="flex justify-center items-center mx-10">
+        <div class="py-10 px-10">
+            <img src="" alt="">
+
+        </div>
+        <div>
+
+        </div>
     </div>
 </section>
 
@@ -196,6 +203,11 @@
     </div>
 
 <!-- Halaman Gallery -->
+<section id="" class="relative mt-10 w-full h-auto">
+    <div class="text-center my-5">
+        <h1 class="text-[48px] font-semibold text-[#2C3930]">Gallery</h1>
+        <p class="text-xl">Keindahan Alam yang ada pada kami dari dulu sampai saat ini</p>
+    </div>
     <div class="max-w-7xl mx-auto px-4 py-8 mb-24">
       <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-3 space-y-3">
           @foreach ([
@@ -227,7 +239,7 @@
           @endforeach
         </div>
     </div>
-
+</section>
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
