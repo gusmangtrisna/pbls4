@@ -201,7 +201,7 @@
 
     <!-- Chatbot Popup -->
     <div id="chatbot-popup"
-      class="hidden fixed bottom-[calc(4rem+1.5rem)] right-0 mr-4 bg-white p-6 rounded-lg border border-[#e5e7eb] w-[500px] h-[610px] z-50 transition-all duration-300 ease-in-out transform scale-95 opacity-0"
+      class="hidden fixed bottom-[calc(4rem+1.5rem)] right-0 mr-6 bg-white p-6 rounded-lg border border-[#e5e7eb] w-[500px] h-[610px] z-50 transition-all duration-300 ease-in-out transform scale-95 opacity-0"
       style="box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgb(0 0 0 / 0.05);">
 
       <div class="flex flex-col space-y-1.5 pb-6">
