@@ -100,14 +100,13 @@
   </section>
 
   <!-- Halaman About Us -->
-<section class="relative bg-[#2C3930] w-full h-auto py-12">
-    <div class="flex justify-center items-center mx-10">
-        <div class="py-10 px-10">
-            <img src="" alt="">
-
-        </div>
-        <div>
-
+<section class="relative bg-[#2C3930] w-full h-auto my-20">
+    <div class="flex items-center justify-between mt-10 px-28 border">
+        <img class="w-[500px] ml-16 rounded-md" src="{{ asset('images/background.svg') }}" alt="">
+        <div class="relative p-6 my-14">
+            <h2 class=" text-white text[24px] font-medium">About Us</h2>
+            <h1 class="text-white text-[40px] font-bold">Keindahan Taman <br />Edelweis Bali</h1>
+            <p class="text-white">Edelweiss, often called the "eternal flower," is a mountain plant that symbolizes immortality and resilience. This flower thrives at high altitudes, such as on Mount Agung, Bali, and is commonly found in the Edelweiss Garden Bali. With its soft silvery-white petals and high resistance to extreme weather, edelweiss represents purity and eternal love. In Bali, this flower also holds cultural significance, especially in Hindu ceremonial traditions. Its unique beauty and limited habitat make edelweiss a protected flower that should not be picked carelessly.</p>
         </div>
     </div>
 </section>
@@ -143,7 +142,6 @@
             <p class="text-gray-600 text-2xl pl-5">8.00 - 19.00</p>
           </div>
         </div>
-
         <div data-aos="fade-left" data-aos-duration="1000" class="mt-6">
           <a href="https://maps.app.goo.gl/G9nLXN2A1YFYuNLGA"
             target="_blank"
