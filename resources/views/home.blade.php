@@ -166,7 +166,7 @@
       }
     </style>
     
-    <section class="w-full py-16 bg-gray-100">
+    <section class="w-full py-16 bg-gray-100 px-10">
       <div class="w-full custom-container-rounded overflow-hidden shadow-lg flex flex-col lg:flex-row bg-white">
     
         <!-- Gambar -->
@@ -305,7 +305,7 @@
     
 
     <!-- Halaman Location -->
-    <section class="relative w-full h-screen bg-white p-10">
+    <section class="relative w-full h-screen bg-white p-10 mb-12">
         <!-- Map Container -->
         <div class="w-full h-full relative">
             <!-- Google Maps Iframe -->
@@ -370,7 +370,6 @@
                     </a>
                 </div>
             </div>
-
     </section>
 
     <!-- Halaman Harga Tiket -->
@@ -388,14 +387,14 @@
 
     <div class="flex flex-col items-center justify-center px-6">
         <div class="flex justify-center items-center gap-20 mt-10 flex-wrap">
-            <div class="bg-white rounded-2xl shadow-2xl border border-[#2C3930] p-10 w-[550px]">
+            <div class="bg-white rounded-2xl border border-[#2C3930] p-10 w-[550px]">
                 <h2 class="font-bold text-2xl text-[#2C3930] mb-10">Entrance Fee Domestic</h2>
                 <ul class="text-[#2C3930] text-xl space-y-3">
                     <li>• <span class="font-bold">Dewasa</span> : Rp 25.000 / Orang</li>
                     <li>• <span class="font-bold">Anak</span> : Rp 15.000 / Orang</li>
                 </ul>
             </div>
-            <div class="bg-white text-[#2C3930] rounded-2xl shadow-2xl border border-[#2C3930] p-10 w-[550px]">
+            <div class="bg-white text-[#2C3930] rounded-2xl border border-[#2C3930] p-10 w-[550px]">
                 <h2 class="font-bold text-2xl text-[#2C3930] mb-10">Entrance Fee International</h2>
                 <ul class="text-xl space-y-3">
                     <li>• <span class="font-bold">Dewasa</span> : Rp 50.000 / Orang</li>
