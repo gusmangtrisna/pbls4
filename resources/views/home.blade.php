@@ -133,51 +133,51 @@
         border-top-left-radius: 150px;
         border-bottom-right-radius: 150px;
       }
-    
+
       .testimonial-wrapper {
         overflow: hidden;
         position: relative;
         height: 260px;
       }
-    
+
       .testimonial-track {
         display: flex;
         transition: transform 5s ease-in-out; /* Transisi lebih lambat 10 detik */
         width: fit-content;
       }
-    
+
       .testimonial-slide {
         flex: 0 0 100%;
         box-sizing: border-box;
         padding-right: 1rem;
       }
-    
+
       .spot-title {
         font-size: 1.875rem;
         font-weight: 700;
         color: #f97316;
         margin-bottom: 0.5rem;
       }
-    
+
       .spot-description {
         font-size: 1.125rem;
         line-height: 1.75rem;
         color: #ffffff;
       }
     </style>
-    
+
     <section class="w-full py-16 bg-gray-100 px-10">
       <div class="w-full custom-container-rounded overflow-hidden shadow-lg flex flex-col lg:flex-row bg-white">
-    
+
         <!-- Gambar -->
         <div class="w-full lg:w-1/2">
-          <img 
-            src="{{ asset('images/background.svg') }}" 
-            alt="Client" 
+          <img
+            src="{{ asset('images/background.svg') }}"
+            alt="Client"
             class="w-full h-full object-cover"
           />
         </div>
-    
+
         <!-- Carousel -->
         <div class="w-full lg:w-1/2 bg-[#2C3930] text-white px-8 py-10 flex flex-col justify-center">
           <div class="testimonial-wrapper">
@@ -189,7 +189,7 @@
                   Jalur pendakian di tempat ini menawarkan pengalaman yang sangat memuaskan bagi para petualang. Rute yang menantang ini mengarah ke Bukit Asah dan Pura Lempuyang, dua tempat yang sangat populer di kalangan pendaki. Selain itu, pemandangan sekitar selama perjalanan juga sangat memukau, memberikan kesan tersendiri bagi setiap orang yang melaluinya.
                 </p>
               </div>
-    
+
               <!-- Slides -->
               <div class="testimonial-slide">
                 <h3 class="spot-title">Hamparan Bunga Edelweis</h3>
@@ -227,7 +227,7 @@
                   Jalur pendakian di tempat ini menawarkan pengalaman yang sangat memuaskan bagi para petualang. Rute yang menantang ini mengarah ke Bukit Asah dan Pura Lempuyang, dua tempat yang sangat populer di kalangan pendaki. Selain itu, pemandangan sekitar selama perjalanan juga sangat memukau, memberikan kesan tersendiri bagi setiap orang yang melaluinya.
                 </p>
               </div>
-    
+
               <!-- Clone first -->
               <div class="testimonial-slide">
                 <h3 class="spot-title">Hamparan Bunga Edelweis</h3>
@@ -237,7 +237,7 @@
               </div>
             </div>
           </div>
-    
+
           <!-- Navigasi panah -->
           <div class="flex gap-4 mt-4">
             <button onclick="prevSlide()" class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center hover:bg-orange-600 transition">
@@ -254,17 +254,17 @@
         </div>
       </div>
     </section>
-    
+
     <script>
       const track = document.getElementById("testimonialTrack");
       const slides = document.querySelectorAll(".testimonial-slide");
       const totalSlides = slides.length;
       let index = 1;
-    
+
       const updatePosition = () => {
         track.style.transform = `translateX(-${index * 100}%)`;
       };
-    
+
       const nextSlide = () => {
         if (index >= totalSlides - 1) {
           index++;
@@ -281,7 +281,7 @@
           updatePosition();
         }
       };
-    
+
       const prevSlide = () => {
         if (index <= 0) {
           index--;
@@ -298,11 +298,11 @@
           updatePosition();
         }
       };
-    
+
       updatePosition();
       setInterval(nextSlide, 10000); // Ganti slide tiap 15 detik
     </script>
-    
+
 
     <!-- Halaman Location -->
     <section class="relative w-full h-screen bg-white p-10 mb-12">
@@ -502,7 +502,28 @@
         </div>
         <div class="max-w-7xl mx-auto px-4 py-8 mb-24">
             <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-3 space-y-3">
-                @foreach (['gallery2.svg', 'gallery3.svg', 'gallery4.svg', 'gallery5.svg', 'gallery6.svg', 'gallery1.svg', 'gallery2.svg', 'gallery3.svg', 'gallery5.svg', 'gallery2.svg', 'gallery3.svg', 'gallery4.svg', 'gallery5.svg', 'gallery6.svg', 'gallery1.svg', 'gallery2.svg', 'gallery3.svg', 'gallery5.svg', 'gallery5.svg'] as $image)
+                @foreach ([
+                    'gallery2.svg',
+                    'gallery3.svg',
+                    'gallery4.svg',
+                    'gallery5.svg',
+                    'gallery6.svg',
+                    'gallery1.svg',
+                    'gallery2.svg',
+                    'gallery3.svg',
+                    'gallery5.svg',
+                    'gallery2.svg',
+                    'gallery3.svg',
+                    'gallery4.svg',
+                    'gallery5.svg',
+                    'gallery6.svg',
+                    'gallery1.svg',
+                    'gallery2.svg',
+                    'gallery3.svg',
+                    'gallery5.svg',
+                    'gallery5.svg'
+                    ]
+                    as $image)
                     <div class="break-inside-avoid overflow-hidden shadow hover:shadow-lg transition">
                         <img src="{{ asset('images/gallery/' . $image) }}" alt="Galeri"
                             class="w-full h-auto block hover:scale-105 transition-transform duration-700">
