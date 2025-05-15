@@ -11,18 +11,16 @@
 
 <!-- Chatbot Popup -->
 <div id="chatbot-popup"
-    class="hidden fixed bottom-[calc(4rem+1.5rem)] right-0 mr-6 bg-white p-6 rounded-lg border border-[#e5e7eb] w-[500px] h-[610px] z-[9998] transition-all duration-300 ease-in-out transform scale-95 opacity-0"
+    class="hidden fixed bottom-[calc(4rem+1.5rem)] right-0 mr-6 bg-white p-6 rounded-lg border border-[#e5e7eb] w-[500px] h-[610px] z-[9998] transition-all duration-300 ease-in-out transform scale-95 opacity-0 flex flex-col"
     style="position: fixed !important; box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgb(0 0 0 / 0.05);">
 
-    <div class="flex flex-col space-y-1.5 pb-6">
+    <div class="flex flex-col space-y-1.5 pb-4">
         <h2 class="font-semibold text-lg tracking-tight">Chatbot</h2>
         <p class="text-sm text-[#6b7280] leading-3">Silahkan Tanyakan Seputar Taman Edelweis Bali</p>
     </div>
 
-    <!-- Chat Container -->
-    <div id="chat-messages" class="pr-4 h-[450px] overflow-y-auto" style="min-width: 100%; display: table;">
-        <!-- Chat AI nya -->
-        <div class="flex gap-3 my-4 text-gray-600 text-sm flex-1">
+    <div id="chat-messages" class="pr-4 flex-1 overflow-y-auto flex flex-col" style="min-width: 100%;">
+        <div class="flex gap-3 mb-2 text-gray-600 text-sm">
             <span class="relative flex shrink-0 overflow-hidden rounded-full w-8 h-8">
                 <div class="rounded-full bg-gray-100 border p-1">
                     <svg stroke="none" fill="black" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"
@@ -33,16 +31,16 @@
                     </svg>
                 </div>
             </span>
-            <p class="leading-relaxed"><span class="block font-bold text-gray-700">AI </span>Halo! Ada yang bisa saya
+            <p class="leading-relaxed break-words max-w-[calc(100%-3rem)]"><span
+                    class="block font-bold text-gray-700">AI </span>Halo! Ada yang bisa saya
                 bantu tentang Taman Edelweis Besakih Bali?</p>
         </div>
     </div>
 
-    <!-- Input Form -->
-    <div class="flex items-center pt-0">
+    <div class="bg-white border-t border-gray-100 pt-3 mt-auto">
         <form id="chat-form" class="flex items-center justify-center w-full space-x-2">
             <input id="chat-input"
-                class="flex h-10 w-full rounded-md border border-[#e5e7eb] px-3 py-2 text-sm placeholder-[#6b7280] focus:outline-none focus:ring-2 focus:ring-[#9ca3af] text-[#030712] focus-visible:ring-offset-2"
+                class="flex h-10 w-full rounded-md border border-[#e5e7eb] bg-white px-3 py-2 text-sm placeholder-[#6b7280] focus:outline-none focus:ring-2 focus:ring-[#9ca3af] text-[#030712] focus-visible:ring-offset-2"
                 placeholder="Ketik pesan Anda..." value="">
             <button id="send-button" type="submit"
                 class="inline-flex items-center justify-center rounded-md text-sm font-medium text-white bg-[#2C3930] hover:bg-[#364c3d] h-10 px-4 py-2">
@@ -62,14 +60,11 @@
     </div>
 </div>
 
-<!-- Pop up Chatbot & Animasi Pop up -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Inisialisasi chat history
         let chatHistory = [];
-        const API_URL = 'http://localhost:8888'; // Ganti dengan URL backend Anda
+        const API_URL = 'http://localhost:8888';
 
-        // Fungsi untuk toggle popup
         setTimeout(function() {
             const toggleBtn = document.getElementById("chatbot-toggle-btn");
             const popup = document.getElementById("chatbot-popup");
@@ -99,10 +94,10 @@
                 });
             }
 
-            // Fungsi untuk menambahkan pesan ke chat container
             function addMessage(content, isUser = false) {
                 const messageDiv = document.createElement('div');
-                messageDiv.className = 'flex gap-3 my-4 text-gray-600 text-sm flex-1';
+                messageDiv.className = isUser ? 'flex gap-3 mb-2 text-gray-600 text-sm' :
+                    'flex gap-3 mb-2 mt-1 text-gray-600 text-sm';
 
                 const avatar = document.createElement('span');
                 avatar.className = 'relative flex shrink-0 overflow-hidden rounded-full w-8 h-8';
@@ -142,7 +137,7 @@
                 avatar.appendChild(avatarInner);
 
                 const textContainer = document.createElement('p');
-                textContainer.className = 'leading-relaxed';
+                textContainer.className = 'leading-relaxed break-words max-w-[calc(100%-3rem)]';
 
                 const nameSpan = document.createElement('span');
                 nameSpan.className = 'block font-bold text-gray-700';
@@ -156,10 +151,8 @@
 
                 chatMessages.appendChild(messageDiv);
 
-                // Auto-scroll ke pesan terbaru
                 chatMessages.scrollTop = chatMessages.scrollHeight;
 
-                // Update chat history untuk API
                 if (isUser) {
                     chatHistory.push({
                         role: "user",
@@ -173,7 +166,10 @@
                 }
             }
 
-            // Fungsi untuk mengirim pesan ke API
+            async function sleep(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
+
             async function sendMessage(message) {
                 try {
                     sendText.classList.add('hidden');
@@ -181,7 +177,56 @@
                     sendButton.disabled = true;
                     chatInput.disabled = true;
 
-                    const response = await fetch(`${API_URL}/chat`, {
+                    addMessage(message, true);
+
+                    const messageDiv = document.createElement('div');
+                    messageDiv.className = 'flex gap-3 mb-2 mt-1 text-gray-600 text-sm';
+
+                    const avatar = document.createElement('span');
+                    avatar.className =
+                        'relative flex shrink-0 overflow-hidden rounded-full w-8 h-8';
+
+                    const avatarInner = document.createElement('div');
+                    avatarInner.className = 'rounded-full bg-gray-100 border p-1';
+
+                    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+                    svg.setAttribute('stroke', 'none');
+                    svg.setAttribute('fill', 'black');
+                    svg.setAttribute('stroke-width', '1.5');
+                    svg.setAttribute('viewBox', '0 0 24 24');
+                    svg.setAttribute('height', '20');
+                    svg.setAttribute('width', '20');
+
+                    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                    path.setAttribute('d',
+                        'M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z'
+                    );
+                    svg.appendChild(path);
+
+                    avatarInner.appendChild(svg);
+                    avatar.appendChild(avatarInner);
+
+                    const textContainer = document.createElement('p');
+                    textContainer.className = 'leading-relaxed break-words max-w-[calc(100%-3rem)]';
+
+                    const nameSpan = document.createElement('span');
+                    nameSpan.className = 'block font-bold text-gray-700';
+                    nameSpan.textContent = 'AI ';
+
+                    const responseText = document.createElement('span');
+                    responseText.id = 'streaming-response';
+
+                    textContainer.appendChild(nameSpan);
+                    textContainer.appendChild(responseText);
+
+                    messageDiv.appendChild(avatar);
+                    messageDiv.appendChild(textContainer);
+
+                    chatMessages.appendChild(messageDiv);
+
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+
+                    const response = await fetch(`${API_URL}/chat-stream`, {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -197,10 +242,38 @@
                         throw new Error('Network response was not ok');
                     }
 
-                    const data = await response.json();
-                    addMessage(data.reply, false);
+                    const reader = response.body.getReader();
+                    const decoder = new TextDecoder();
+                    let responseContent = '';
 
-                    // Re-enable form
+                    while (true) {
+                        const {
+                            done,
+                            value
+                        } = await reader.read();
+
+                        if (done) {
+                            break;
+                        }
+
+                        const chunk = decoder.decode(value, {
+                            stream: true
+                        });
+
+                        // Memecah chunk menjadi karakter dan menampilkannya satu per satu dengan delay
+                        for (let i = 0; i < chunk.length; i++) {
+                            responseContent += chunk[i];
+                            responseText.textContent = responseContent;
+                            chatMessages.scrollTop = chatMessages.scrollHeight;
+                            await sleep(15); // Tambahkan delay 15ms antar karakter
+                        }
+                    }
+
+                    chatHistory.push({
+                        role: "assistant",
+                        content: responseContent
+                    });
+
                     sendText.classList.remove('hidden');
                     loadingSpinner.classList.add('hidden');
                     sendButton.disabled = false;
@@ -209,10 +282,9 @@
 
                 } catch (error) {
                     console.error('Error:', error);
-                    addMessage("Maaf, saya mengalami kesalahan teknis. Silakan coba lagi nanti.",
-                        false);
+                    document.getElementById('streaming-response').textContent =
+                        "Maaf, saya mengalami kesalahan teknis. Silakan coba lagi nanti.";
 
-                    // Re-enable form pada error
                     sendText.classList.remove('hidden');
                     loadingSpinner.classList.add('hidden');
                     sendButton.disabled = false;
@@ -220,14 +292,12 @@
                 }
             }
 
-            // Event listener untuk form
             if (chatForm) {
                 chatForm.addEventListener('submit', function(e) {
                     e.preventDefault();
                     const message = chatInput.value.trim();
 
                     if (message) {
-                        addMessage(message, true);
                         chatInput.value = '';
                         sendMessage(message);
                     }

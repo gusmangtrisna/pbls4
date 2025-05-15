@@ -5,7 +5,6 @@ from pydantic import BaseModel
 from groq import Groq
 from dotenv import load_dotenv
 import os
-import asyncio
 from typing import List, Dict, Any, Optional
 
 load_dotenv()
@@ -20,7 +19,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Ambil API key dari environment variable
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 if not GROQ_API_KEY:
     raise ValueError("GROQ_API_KEY environment variable is not set")
