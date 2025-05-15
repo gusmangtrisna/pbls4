@@ -1,0 +1,6 @@
+# Haha
+.env
+/.venv
+
+# Conda
+/.conda
