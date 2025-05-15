@@ -26,11 +26,11 @@
                     <p class="mt-8 text-pretty text-lg font-medium text-gray-900 sm:text-xl/8">Anim aute id magna aliqua
                         ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam
                         occaecat.</p>
-                    <div class="mt-10 flex items-center justify-center gap-x-6">
+                    {{-- <div class="mt-10 flex items-center justify-center gap-x-6">
                         <a href="#"
                             class="rounded-md bg-[#2C3930] px-5 py-3 text-base font-semibold text-white shadow-sm hover:bg-[#364c3d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2C3930]">Pesan
                             Tiket Masuk</a>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
@@ -166,141 +166,162 @@
       }
     </style>
     
-    <section class="w-full py-16 bg-gray-100 px-10">
-      <div class="w-full custom-container-rounded overflow-hidden shadow-lg flex flex-col lg:flex-row bg-white">
-    
-        <!-- Gambar -->
-        <div class="w-full lg:w-1/2">
-          <img 
-            src="{{ asset('images/background.svg') }}" 
-            alt="Client" 
-            class="w-full h-full object-cover"
-          />
-        </div>
-    
-        <!-- Carousel -->
-        <div class="w-full lg:w-1/2 bg-[#2C3930] text-white px-8 py-10 flex flex-col justify-center">
-          <div class="testimonial-wrapper">
-            <div class="testimonial-track" id="testimonialTrack">
-              <!-- Clone last -->
-              <div class="testimonial-slide">
-                <h3 class="spot-title">Jalur Pendakian (Trekking)</h3>
-                <p class="spot-description">
-                  Jalur pendakian di tempat ini menawarkan pengalaman yang sangat memuaskan bagi para petualang. Rute yang menantang ini mengarah ke Bukit Asah dan Pura Lempuyang, dua tempat yang sangat populer di kalangan pendaki. Selain itu, pemandangan sekitar selama perjalanan juga sangat memukau, memberikan kesan tersendiri bagi setiap orang yang melaluinya.
-                </p>
-              </div>
-    
-              <!-- Slides -->
-              <div class="testimonial-slide">
-                <h3 class="spot-title">Hamparan Bunga Edelweis</h3>
-                <p class="spot-description">
-                  Hamparan bunga edelweis yang menakjubkan menjadi daya tarik utama di tempat ini. Dengan latar belakang pegunungan yang indah, taman ini memiliki ladang bunga edelweis (Anaphalis javanica) yang tumbuh subur dan menciptakan pemandangan alam yang memukau. Keindahan pemandangan ini sering kali membuat pengunjung merasa seperti berada di dunia yang berbeda, penuh dengan kedamaian dan keheningan.
-                </p>
-              </div>
-              <div class="testimonial-slide">
-                <h3 class="spot-title">Spot Foto Estetik</h3>
-                <p class="spot-description">
-                  Di sekitar area ini, terdapat berbagai spot foto yang sangat estetik dan menarik. Spot-spot ini dirancang untuk memberikan pengalaman fotografi yang tak terlupakan, dengan latar belakang bunga edelweis yang mempesona. Terdapat juga ayunan, rumah pohon, jembatan, dan berbagai dekorasi unik lainnya yang dapat membuat setiap foto terlihat semakin menarik dan berkesan.
-                </p>
-              </div>
-              <div class="testimonial-slide">
-                <h3 class="spot-title">Pemandangan Gunung & Lembah</h3>
-                <p class="spot-description">
-                  Dari ketinggian sekitar 1.200 mdpl, tempat ini memberikan pemandangan spektakuler dari Gunung Agung serta lembah-lembah sekitarnya. Panorama alam yang begitu luas dan menakjubkan memberikan ketenangan bagi setiap orang yang datang. Keindahan alam yang alami dan tidak terjamah ini menjadi alasan banyak orang untuk datang berkunjung dan menikmati ketenangannya.
-                </p>
-              </div>
-              <div class="testimonial-slide">
-                <h3 class="spot-title">Area Camping Nyaman</h3>
-                <p class="spot-description">
-                  Bagi pecinta alam, area camping yang ada di tempat ini merupakan pilihan yang sempurna. Dengan lokasi yang sangat strategis, pengunjung dapat menikmati sunrise dan sunset yang sangat memukau. Tenda yang didirikan di sini memberikan kenyamanan, serta suasana tenang yang jarang ditemukan di tempat lain, menjadikan pengalaman berkemah di sini sangat berkesan.
-                </p>
-              </div>
-              <div class="testimonial-slide">
-                <h3 class="spot-title">Warung & Kafe</h3>
-                <p class="spot-description">
-                  Setelah menikmati keindahan alam, pengunjung dapat bersantai di warung dan kafe kecil yang ada di sekitar lokasi. Menyediakan berbagai makanan dan minuman ringan, kafe ini adalah tempat yang sempurna untuk beristirahat sambil menikmati pemandangan alam sekitar yang asri. Dengan suasana yang santai dan nyaman, kafe ini menjadi tempat yang menyenangkan untuk bercengkerama bersama teman atau keluarga.
-                </p>
-              </div>
-              <div class="testimonial-slide">
-                <h3 class="spot-title">Jalur Pendakian (Trekking)</h3>
-                <p class="spot-description">
-                  Jalur pendakian di tempat ini menawarkan pengalaman yang sangat memuaskan bagi para petualang. Rute yang menantang ini mengarah ke Bukit Asah dan Pura Lempuyang, dua tempat yang sangat populer di kalangan pendaki. Selain itu, pemandangan sekitar selama perjalanan juga sangat memukau, memberikan kesan tersendiri bagi setiap orang yang melaluinya.
-                </p>
-              </div>
-    
-              <!-- Clone first -->
-              <div class="testimonial-slide">
-                <h3 class="spot-title">Hamparan Bunga Edelweis</h3>
-                <p class="spot-description">
-                  Hamparan bunga edelweis yang menakjubkan menjadi daya tarik utama di tempat ini. Dengan latar belakang pegunungan yang indah, taman ini memiliki ladang bunga edelweis (Anaphalis javanica) yang tumbuh subur dan menciptakan pemandangan alam yang memukau. Keindahan pemandangan ini sering kali membuat pengunjung merasa seperti berada di dunia yang berbeda, penuh dengan kedamaian dan keheningan.
-                </p>
-              </div>
+    <!-- Halaman Deskripsi Taman Edelweis -->
+    <section class="w-full py-16 bg-white px-10">
+        <div class="w-full custom-container-rounded overflow-hidden shadow-lg flex flex-col lg:flex-row bg-white">
+
+            <!-- Gambar -->
+            <div class="w-full lg:w-1/2">
+                <img 
+                    src="{{ asset('images/background.svg') }}" 
+                    alt="Client" 
+                    class="w-full h-full object-cover"
+                />
             </div>
-          </div>
-    
-          <!-- Navigasi panah -->
-          <div class="flex gap-4 mt-4">
-            <button onclick="prevSlide()" class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center hover:bg-orange-600 transition">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-              </svg>
-            </button>
-            <button onclick="nextSlide()" class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center hover:bg-orange-600 transition">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
-            </button>
-          </div>
+
+            <!-- Carousel -->
+            <div class="w-full lg:w-1/2 bg-[#2C3930] text-white px-8 py-10 flex flex-col justify-center">
+                <div class="testimonial-wrapper">
+                    <div class="testimonial-track" id="testimonialTrack" style="word-break: break-word; white-space: normal;">
+                        <!-- Clone last -->
+                        <div class="testimonial-slide">
+                            <h3 class="spot-title">Jalur Pendakian (Trekking)</h3>
+                            <p class="spot-description">
+                                Jalur pendakian di tempat ini menawarkan pengalaman yang sangat memuaskan bagi para petualang. Rute yang menantang ini mengarah ke Bukit Asah dan Pura Lempuyang, dua tempat yang sangat populer di kalangan pendaki. Selain itu, pemandangan sekitar selama perjalanan juga sangat memukau, memberikan kesan tersendiri bagi setiap orang yang melaluinya.
+                            </p>
+                        </div>
+
+                        <!-- Slides -->
+                        <div class="testimonial-slide">
+                            <h3 class="spot-title">Hamparan Bunga Edelweis</h3>
+                            <p class="spot-description">
+                                Hamparan bunga edelweis yang menakjubkan menjadi daya tarik utama di tempat ini. Dengan latar belakang pegunungan yang indah, taman ini memiliki ladang bunga edelweis (Anaphalis javanica) yang tumbuh subur dan menciptakan pemandangan alam yang memukau. Keindahan pemandangan ini sering kali membuat pengunjung merasa seperti berada di dunia yang berbeda, penuh dengan kedamaian dan keheningan.
+                            </p>
+                        </div>
+                        <div class="testimonial-slide">
+                            <h3 class="spot-title">Spot Foto Estetik</h3>
+                            <p class="spot-description">
+                                Di sekitar area ini, terdapat berbagai spot foto yang sangat estetik dan menarik. Spot-spot ini dirancang untuk memberikan pengalaman fotografi yang tak terlupakan, dengan latar belakang bunga edelweis yang mempesona. Terdapat juga ayunan, rumah pohon, jembatan, dan berbagai dekorasi unik lainnya yang dapat membuat setiap foto terlihat semakin menarik dan berkesan.
+                            </p>
+                        </div>
+                        <div class="testimonial-slide">
+                            <h3 class="spot-title">Pemandangan Gunung & Lembah</h3>
+                            <p class="spot-description">
+                                Dari ketinggian sekitar 1.200 mdpl, tempat ini memberikan pemandangan spektakuler dari Gunung Agung serta lembah-lembah sekitarnya. Panorama alam yang begitu luas dan menakjubkan memberikan ketenangan bagi setiap orang yang datang. Keindahan alam yang alami dan tidak terjamah ini menjadi alasan banyak orang untuk datang berkunjung dan menikmati ketenangannya.
+                            </p>
+                        </div>
+                        <div class="testimonial-slide">
+                            <h3 class="spot-title">Area Camping Nyaman</h3>
+                            <p class="spot-description">
+                                Bagi pecinta alam, area camping yang ada di tempat ini merupakan pilihan yang sempurna. Dengan lokasi yang sangat strategis, pengunjung dapat menikmati sunrise dan sunset yang sangat memukau. Tenda yang didirikan di sini memberikan kenyamanan, serta suasana tenang yang jarang ditemukan di tempat lain, menjadikan pengalaman berkemah di sini sangat berkesan.
+                            </p>
+                        </div>
+                        <div class="testimonial-slide">
+                            <h3 class="spot-title">Warung & Kafe</h3>
+                            <p class="spot-description">
+                                Setelah menikmati keindahan alam, pengunjung dapat bersantai di warung dan kafe kecil yang ada di sekitar lokasi. Menyediakan berbagai makanan dan minuman ringan, kafe ini adalah tempat yang sempurna untuk beristirahat sambil menikmati pemandangan alam sekitar yang asri. Dengan suasana yang santai dan nyaman, kafe ini menjadi tempat yang menyenangkan untuk bercengkerama bersama teman atau keluarga.
+                            </p>
+                        </div>
+                        <div class="testimonial-slide">
+                            <h3 class="spot-title">Jalur Pendakian (Trekking)</h3>
+                            <p class="spot-description">
+                                Jalur pendakian di tempat ini menawarkan pengalaman yang sangat memuaskan bagi para petualang. Rute yang menantang ini mengarah ke Bukit Asah dan Pura Lempuyang, dua tempat yang sangat populer di kalangan pendaki. Selain itu, pemandangan sekitar selama perjalanan juga sangat memukau, memberikan kesan tersendiri bagi setiap orang yang melaluinya.
+                            </p>
+                        </div>
+
+                        <!-- Clone first -->
+                        <div class="testimonial-slide">
+                            <h3 class="spot-title">Hamparan Bunga Edelweis</h3>
+                            <p class="spot-description">
+                                Hamparan bunga edelweis yang menakjubkan menjadi daya tarik utama di tempat ini. Dengan latar belakang pegunungan yang indah, taman ini memiliki ladang bunga edelweis (Anaphalis javanica) yang tumbuh subur dan menciptakan pemandangan alam yang memukau. Keindahan pemandangan ini sering kali membuat pengunjung merasa seperti berada di dunia yang berbeda, penuh dengan kedamaian dan keheningan.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigasi panah -->
+                <div class="flex gap-4 mt-4">
+                    <button onclick="prevSlide()" class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center hover:bg-orange-600 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                    </button>
+                    <button onclick="nextSlide()" class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center hover:bg-orange-600 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
-    
+
+    <style>
+        .testimonial-slide {
+            flex: 0 0 100%;
+            box-sizing: border-box;
+            padding-right: 1rem;
+            /* Ensure text wraps inside each slide */
+            word-break: break-word;
+            white-space: normal;
+            min-width: 0;
+        }
+        .testimonial-track {
+            display: flex;
+            transition: transform 5s ease-in-out;
+            width: fit-content;
+            /* Allow text wrapping in track */
+            word-break: break-word;
+            white-space: normal;
+        }
+    </style>
+
     <script>
-      const track = document.getElementById("testimonialTrack");
-      const slides = document.querySelectorAll(".testimonial-slide");
-      const totalSlides = slides.length;
-      let index = 1;
-    
-      const updatePosition = () => {
-        track.style.transform = `translateX(-${index * 100}%)`;
-      };
-    
-      const nextSlide = () => {
-        if (index >= totalSlides - 1) {
-          index++;
-          updatePosition();
-          setTimeout(() => {
-            track.style.transition = "none";
-            index = 1;
-            updatePosition();
-            void track.offsetWidth; // trigger reflow
-            track.style.transition = "transform 5s ease-in-out";
-          }, 2000);
-        } else {
-          index++;
-          updatePosition();
-        }
-      };
-    
-      const prevSlide = () => {
-        if (index <= 0) {
-          index--;
-          updatePosition();
-          setTimeout(() => {
-            track.style.transition = "none";
-            index = totalSlides - 2;
-            updatePosition();
-            void track.offsetWidth;
-            track.style.transition = "transform 5s ease-in-out";
-          }, 2000);
-        } else {
-          index--;
-          updatePosition();
-        }
-      };
-    
-      updatePosition();
-      setInterval(nextSlide, 10000); // Ganti slide tiap 15 detik
+        const track = document.getElementById("testimonialTrack");
+        const slides = document.querySelectorAll(".testimonial-slide");
+        const totalSlides = slides.length;
+        let index = 1;
+
+        const updatePosition = () => {
+            track.style.transform = `translateX(-${index * 100}%)`;
+        };
+
+        const nextSlide = () => {
+            if (index >= totalSlides - 1) {
+                index++;
+                updatePosition();
+                setTimeout(() => {
+                    track.style.transition = "none";
+                    index = 1;
+                    updatePosition();
+                    void track.offsetWidth; // trigger reflow
+                    track.style.transition = "transform 5s ease-in-out";
+                }, 2000);
+            } else {
+                index++;
+                updatePosition();
+            }
+        };
+
+        const prevSlide = () => {
+            if (index <= 0) {
+                index--;
+                updatePosition();
+                setTimeout(() => {
+                    track.style.transition = "none";
+                    index = totalSlides - 2;
+                    updatePosition();
+                    void track.offsetWidth;
+                    track.style.transition = "transform 5s ease-in-out";
+                }, 2000);
+            } else {
+                index--;
+                updatePosition();
+            }
+        };
+
+        updatePosition();
+        setInterval(nextSlide, 10000);
     </script>
     
 
