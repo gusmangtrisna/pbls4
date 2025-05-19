@@ -2,7 +2,7 @@
     <title>Login</title>
     @vite(['resources/css/app.css'])
 </head>
-<body class="bg-[#2C3930] flex justify-center items-center min-h-screen">
+<body class="bg-cover bg-center bg-no-repeat flex justify-center items-center min-h-screen" style="background-image: url('{{ asset('/images/background.svg') }}');">
     <div class="bg-white rounded-2xl shadow-2xl px-10 py-12 text-center">
         <h1 class="text-3xl font-semibold text-[#2C3930] mb-2">SELAMAT DATANG</h1>
         <p class="text-gray-600 text-base w-64 text-center justify-center pl-8">Silakan Masukan Email dan Password Anda</p>
