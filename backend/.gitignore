@@ -4,3 +4,5 @@
 
 # Conda
 /.conda
+/__pycache__
+*.pyc

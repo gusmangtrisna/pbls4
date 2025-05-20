@@ -1,7 +1,6 @@
-<!-- Tombol Chatbot -->
 <button id="chatbot-toggle-btn"
     class="fixed bottom-4 right-6 bg-[#2C3930] hover:bg-[#364c3d] text-white p-3 rounded-full shadow-lg transition duration-300 ease-in-out z-[9999]"
-    aria-label="Chatbot" style="position: fixed !important;">
+    aria-label="Chatbot">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
         class="w-10 h-10">
         <path stroke-linecap="round" stroke-linejoin="round"
@@ -9,31 +8,31 @@
     </svg>
 </button>
 
-<!-- Chatbot Popup -->
 <div id="chatbot-popup"
-    class="hidden fixed bottom-[calc(4rem+1.5rem)] right-0 mr-6 bg-white p-6 rounded-lg border border-[#e5e7eb] w-[500px] h-[610px] z-[9998] transition-all duration-300 ease-in-out transform scale-95 opacity-0 flex flex-col"
-    style="position: fixed !important; box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgb(0 0 0 / 0.05);">
+    class="hidden fixed bottom-[calc(4rem+1.5rem)] right-0 mr-6 bg-white p-6 rounded-lg border border-[#e5e7eb] w-[500px] h-[610px] z-[9998] transition-all duration-300 ease-in-out transform scale-95 opacity-0 md:flex flex-col shadow-lg"
+    style="box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);">
 
-    <div class="flex flex-col space-y-1.5 pb-4">
+    <div class="flex flex-col space-y-1.5 pb-4 border-b">
         <h2 class="font-semibold text-lg tracking-tight">Chatbot</h2>
         <p class="text-sm text-[#6b7280] leading-3">Silahkan Tanyakan Seputar Taman Edelweis Bali</p>
     </div>
 
-    <div id="chat-messages" class="pr-4 flex-1 overflow-y-auto flex flex-col" style="min-width: 100%;">
+    <div id="chat-messages" class="pr-4 flex-1 overflow-y-auto flex flex-col space-y-4 py-4" style="scrollbar-width: thin; min-width: 100%;">
         <div class="flex gap-3 mb-2 text-gray-600 text-sm">
             <span class="relative flex shrink-0 overflow-hidden rounded-full w-8 h-8">
-                <div class="rounded-full bg-gray-100 border p-1">
+                <div class="rounded-full bg-gray-100 border p-1 flex items-center justify-center">
                     <svg stroke="none" fill="black" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"
-                        height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                        height="16" width="16" class="transform -translate-y-[2px]" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z">
                         </path>
                     </svg>
                 </div>
             </span>
-            <p class="leading-relaxed break-words max-w-[calc(100%-3rem)]"><span
-                    class="block font-bold text-gray-700">AI </span>Halo! Ada yang bisa saya
-                bantu tentang Taman Edelweis Besakih Bali?</p>
+            <div class="bg-gray-50 rounded-lg px-4 py-2 max-w-[calc(100%-3rem)]">
+                <span class="block font-bold text-gray-700 mb-1">AI</span>
+                <div class="prose prose-sm">Halo! Ada yang bisa saya bantu tentang Taman Edelweis Besakih Bali?</div>
+            </div>
         </div>
     </div>
 
@@ -43,7 +42,7 @@
                 class="flex h-10 w-full rounded-md border border-[#e5e7eb] bg-white px-3 py-2 text-sm placeholder-[#6b7280] focus:outline-none focus:ring-2 focus:ring-[#9ca3af] text-[#030712] focus-visible:ring-offset-2"
                 placeholder="Ketik pesan Anda..." value="">
             <button id="send-button" type="submit"
-                class="inline-flex items-center justify-center rounded-md text-sm font-medium text-white bg-[#2C3930] hover:bg-[#364c3d] h-10 px-4 py-2">
+                class="inline-flex items-center justify-center rounded-md text-sm font-medium text-white bg-[#2C3930] hover:bg-[#364c3d] h-10 px-4 py-2 transition-colors duration-200">
                 <span id="send-text">Kirim</span>
                 <span id="loading-spinner" class="hidden">
                     <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -60,10 +59,20 @@
     </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.5/dist/purify.min.js"></script>
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         let chatHistory = [];
-        const API_URL = 'http://localhost:8888';
+        const API_URL = 'http://localhost:8080';
+
+        marked.setOptions({
+            breaks: true,
+            gfm: true,
+            headerIds: false,
+            mangle: false
+        });
 
         setTimeout(function() {
             const toggleBtn = document.getElementById("chatbot-toggle-btn");
@@ -74,6 +83,119 @@
             const sendButton = document.getElementById("send-button");
             const sendText = document.getElementById("send-text");
             const loadingSpinner = document.getElementById("loading-spinner");
+
+            const style = document.createElement('style');
+            style.textContent = `
+                #chat-messages::-webkit-scrollbar {
+                    width: 6px;
+                }
+                #chat-messages::-webkit-scrollbar-track {
+                    background: #f1f1f1;
+                    border-radius: 10px;
+                }
+                #chat-messages::-webkit-scrollbar-thumb {
+                    background: #c1c1c1;
+                    border-radius: 10px;
+                }
+                #chat-messages::-webkit-scrollbar-thumb:hover {
+                    background: #a1a1a1;
+                }
+
+                .user-message {
+                    background-color: #f3f8ff;
+                }
+                .ai-message {
+                    background-color: #f9f9f9;
+                }
+
+                .typing-indicator {
+                    display: inline-flex;
+                    align-items: center;
+                    margin-top: 10px;
+                    margin-bottom: 12px;
+                    height: 10px;
+                }
+                .typing-indicator span {
+                    width: 5px;
+                    height: 5px;
+                    margin: 0 2px;
+                    background-color: #888;
+                    border-radius: 50%;
+                    display: inline-block;
+                    animation: bounce 1.2s infinite ease-in-out both;
+                }
+                .typing-indicator span:nth-child(1) {
+                    animation-delay: -0.32s;
+                }
+                .typing-indicator span:nth-child(2) {
+                    animation-delay: -0.16s;
+                }
+                @keyframes bounce {
+                    0%, 80%, 100% {
+                        transform: translateY(0);
+                    }
+                    40% {
+                        transform: translateY(-8px);
+                    }
+                }
+
+                .prose p {
+                    margin-top: 0.5em;
+                    margin-bottom: 0.5em;
+                }
+                .prose ul {
+                    margin-top: 0.5em;
+                    margin-bottom: 0.5em;
+                    padding-left: 1.5em;
+                    list-style-type: disc;
+                }
+                .prose ol {
+                    margin-top: 0.5em;
+                    margin-bottom: 0.5em;
+                    padding-left: 1.5em;
+                    list-style-type: decimal;
+                }
+                .prose li {
+                    margin-top: 0.25em;
+                    margin-bottom: 0.25em;
+                    display: list-item;
+                }
+                .prose a {
+                    color: #3b82f6;
+                    text-decoration: underline;
+                }
+                .prose strong {
+                    font-weight: 600;
+                }
+                .prose em {
+                    font-style: italic;
+                }
+                .prose code {
+                    font-family: monospace;
+                    background-color: #f3f4f6;
+                    padding: 0.1em 0.3em;
+                    border-radius: 0.2em;
+                    font-size: 0.9em;
+                }
+                .prose pre {
+                    background-color: #f3f4f6;
+                    padding: 0.5em;
+                    border-radius: 0.375em;
+                    overflow-x: auto;
+                    margin: 0.5em 0;
+                }
+                .prose pre code {
+                    background-color: transparent;
+                    padding: 0;
+                }
+                .prose blockquote {
+                    border-left: 3px solid #d1d5db;
+                    padding-left: 0.75em;
+                    font-style: italic;
+                    margin: 0.5em 0;
+                }
+            `;
+            document.head.appendChild(style);
 
             if (toggleBtn && popup) {
                 toggleBtn.addEventListener("click", () => {
@@ -94,76 +216,91 @@
                 });
             }
 
-            function addMessage(content, isUser = false) {
-                const messageDiv = document.createElement('div');
-                messageDiv.className = isUser ? 'flex gap-3 mb-2 text-gray-600 text-sm' :
-                    'flex gap-3 mb-2 mt-1 text-gray-600 text-sm';
-
+            const createAvatar = (isUser) => {
                 const avatar = document.createElement('span');
                 avatar.className = 'relative flex shrink-0 overflow-hidden rounded-full w-8 h-8';
 
                 const avatarInner = document.createElement('div');
-                avatarInner.className = 'rounded-full bg-gray-100 border p-1';
+                avatarInner.className = 'rounded-full bg-gray-100 border p-1 flex items-center justify-center';
 
                 const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 
                 if (isUser) {
                     svg.setAttribute('fill', 'black');
                     svg.setAttribute('viewBox', '0 0 16 16');
-                    svg.setAttribute('height', '20');
-                    svg.setAttribute('width', '20');
+                    svg.setAttribute('height', '16');
+                    svg.setAttribute('width', '16');
+                    svg.className = 'transform translate-y-0';
 
                     const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-                    path.setAttribute('d',
-                        'M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z'
-                    );
+                    path.setAttribute('d', 'M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z');
                     svg.appendChild(path);
                 } else {
                     svg.setAttribute('stroke', 'none');
                     svg.setAttribute('fill', 'black');
                     svg.setAttribute('stroke-width', '1.5');
                     svg.setAttribute('viewBox', '0 0 24 24');
-                    svg.setAttribute('height', '20');
-                    svg.setAttribute('width', '20');
+                    svg.setAttribute('height', '16');
+                    svg.setAttribute('width', '16');
+                    svg.className = 'transform -translate-y-[2px]';
 
                     const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-                    path.setAttribute('d',
-                        'M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z'
-                    );
+                    path.setAttribute('d', 'M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z');
                     svg.appendChild(path);
                 }
 
                 avatarInner.appendChild(svg);
                 avatar.appendChild(avatarInner);
 
-                const textContainer = document.createElement('p');
-                textContainer.className = 'leading-relaxed break-words max-w-[calc(100%-3rem)]';
+                return avatar;
+            };
+
+            function addMessage(content, isUser = false) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'flex gap-3 text-gray-600 text-sm';
+
+                const avatar = createAvatar(isUser);
+
+                const messageContainer = document.createElement('div');
+                messageContainer.className = isUser ?
+                    'user-message rounded-lg px-4 py-2 max-w-[calc(100%-3rem)]' :
+                    'ai-message rounded-lg px-4 py-3 max-w-[calc(100%-3rem)]';
 
                 const nameSpan = document.createElement('span');
-                nameSpan.className = 'block font-bold text-gray-700';
-                nameSpan.textContent = isUser ? 'Anda ' : 'AI ';
+                nameSpan.className = 'block font-bold text-gray-700 mb-1';
+                nameSpan.textContent = isUser ? 'Anda' : 'AI';
 
-                textContainer.appendChild(nameSpan);
-                textContainer.appendChild(document.createTextNode(content));
-
-                messageDiv.appendChild(avatar);
-                messageDiv.appendChild(textContainer);
-
-                chatMessages.appendChild(messageDiv);
-
-                chatMessages.scrollTop = chatMessages.scrollHeight;
+                const textContainer = document.createElement('div');
+                textContainer.className = 'prose prose-sm';
 
                 if (isUser) {
-                    chatHistory.push({
-                        role: "user",
-                        content: content
-                    });
+                    textContainer.textContent = content;
                 } else {
-                    chatHistory.push({
-                        role: "assistant",
-                        content: content
-                    });
+                    const cleanHtml = DOMPurify.sanitize(marked.parse(content));
+                    textContainer.innerHTML = cleanHtml;
                 }
+
+                messageContainer.appendChild(nameSpan);
+
+                if (!isUser) {
+                    const typingIndicator = document.createElement('div');
+                    typingIndicator.className = 'typing-indicator mb-2';
+                    typingIndicator.innerHTML = '<span></span><span></span><span></span>';
+                    messageContainer.appendChild(typingIndicator);
+                }
+
+                messageContainer.appendChild(textContainer);
+
+                messageDiv.appendChild(avatar);
+                messageDiv.appendChild(messageContainer);
+
+                chatMessages.appendChild(messageDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+
+                chatHistory.push({
+                    role: isUser ? "user" : "assistant",
+                    content: content
+                });
             }
 
             async function sleep(ms) {
@@ -180,50 +317,33 @@
                     addMessage(message, true);
 
                     const messageDiv = document.createElement('div');
-                    messageDiv.className = 'flex gap-3 mb-2 mt-1 text-gray-600 text-sm';
+                    messageDiv.className = 'flex gap-3 text-gray-600 text-sm';
 
-                    const avatar = document.createElement('span');
-                    avatar.className =
-                        'relative flex shrink-0 overflow-hidden rounded-full w-8 h-8';
+                    const avatar = createAvatar(false);
 
-                    const avatarInner = document.createElement('div');
-                    avatarInner.className = 'rounded-full bg-gray-100 border p-1';
-
-                    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-                    svg.setAttribute('stroke', 'none');
-                    svg.setAttribute('fill', 'black');
-                    svg.setAttribute('stroke-width', '1.5');
-                    svg.setAttribute('viewBox', '0 0 24 24');
-                    svg.setAttribute('height', '20');
-                    svg.setAttribute('width', '20');
-
-                    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-                    path.setAttribute('d',
-                        'M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z'
-                    );
-                    svg.appendChild(path);
-
-                    avatarInner.appendChild(svg);
-                    avatar.appendChild(avatarInner);
-
-                    const textContainer = document.createElement('p');
-                    textContainer.className = 'leading-relaxed break-words max-w-[calc(100%-3rem)]';
+                    const messageContainer = document.createElement('div');
+                    messageContainer.className = 'ai-message rounded-lg px-4 py-3 max-w-[calc(100%-3rem)]';
 
                     const nameSpan = document.createElement('span');
-                    nameSpan.className = 'block font-bold text-gray-700';
-                    nameSpan.textContent = 'AI ';
+                    nameSpan.className = 'block font-bold text-gray-700 mb-1';
+                    nameSpan.textContent = 'AI';
 
-                    const responseText = document.createElement('span');
-                    responseText.id = 'streaming-response';
+                    const typingIndicator = document.createElement('div');
+                    typingIndicator.className = 'typing-indicator mb-2';
+                    typingIndicator.innerHTML = '<span></span><span></span><span></span>';
 
-                    textContainer.appendChild(nameSpan);
-                    textContainer.appendChild(responseText);
+                    const responseContainer = document.createElement('div');
+                    responseContainer.className = 'prose prose-sm';
+                    responseContainer.id = 'streaming-response';
+
+                    messageContainer.appendChild(nameSpan);
+                    messageContainer.appendChild(typingIndicator);
+                    messageContainer.appendChild(responseContainer);
 
                     messageDiv.appendChild(avatar);
-                    messageDiv.appendChild(textContainer);
+                    messageDiv.appendChild(messageContainer);
 
                     chatMessages.appendChild(messageDiv);
-
                     chatMessages.scrollTop = chatMessages.scrollHeight;
 
                     const response = await fetch(`${API_URL}/chat-stream`, {
@@ -232,8 +352,7 @@
                             'Content-Type': 'application/json'
                         },
                         body: JSON.stringify({
-                            history: chatHistory.filter(msg => msg.role !==
-                                "system"),
+                            history: chatHistory.filter(msg => msg.role !== "system"),
                             message: message
                         })
                     });
@@ -247,27 +366,24 @@
                     let responseContent = '';
 
                     while (true) {
-                        const {
-                            done,
-                            value
-                        } = await reader.read();
+                        const { done, value } = await reader.read();
 
                         if (done) {
                             break;
                         }
 
-                        const chunk = decoder.decode(value, {
-                            stream: true
-                        });
+                        const chunk = decoder.decode(value, { stream: true });
 
-                        // Memecah chunk menjadi karakter dan menampilkannya satu per satu dengan delay
                         for (let i = 0; i < chunk.length; i++) {
                             responseContent += chunk[i];
-                            responseText.textContent = responseContent;
+                            const cleanHtml = DOMPurify.sanitize(marked.parse(responseContent));
+                            responseContainer.innerHTML = cleanHtml;
                             chatMessages.scrollTop = chatMessages.scrollHeight;
-                            await sleep(15); // Tambahkan delay 15ms antar karakter
+                            await sleep(15);
                         }
                     }
+
+                    typingIndicator.style.display = 'none';
 
                     chatHistory.push({
                         role: "assistant",
@@ -282,8 +398,10 @@
 
                 } catch (error) {
                     console.error('Error:', error);
-                    document.getElementById('streaming-response').textContent =
-                        "Maaf, saya mengalami kesalahan teknis. Silakan coba lagi nanti.";
+                    const streamingResponse = document.getElementById('streaming-response');
+                    if (streamingResponse) {
+                        streamingResponse.innerHTML = "Maaf, saya mengalami kesalahan teknis. Silakan coba lagi nanti.";
+                    }
 
                     sendText.classList.remove('hidden');
                     loadingSpinner.classList.add('hidden');
@@ -302,7 +420,24 @@
                         sendMessage(message);
                     }
                 });
+
+                chatInput.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' && !e.shiftKey) {
+                        e.preventDefault();
+                        chatForm.dispatchEvent(new Event('submit'));
+                    }
+                });
             }
+
+            document.addEventListener('click', function(e) {
+                if (popup && !popup.contains(e.target) && !toggleBtn.contains(e.target) && !popup.classList.contains('hidden')) {
+                    popup.classList.remove("scale-100", "opacity-100");
+                    popup.classList.add("scale-95", "opacity-0");
+                    setTimeout(() => {
+                        popup.classList.add("hidden");
+                    }, 300);
+                }
+            });
         }, 300);
     });
 </script>
