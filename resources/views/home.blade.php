@@ -133,32 +133,32 @@
         border-top-left-radius: 150px;
         border-bottom-right-radius: 150px;
       }
-    
+
       .testimonial-wrapper {
         overflow: hidden;
         position: relative;
         height: 260px;
       }
-    
+
       .testimonial-track {
         display: flex;
         transition: transform 5s ease-in-out; /* Transisi lebih lambat 10 detik */
         width: fit-content;
       }
-    
+
       .testimonial-slide {
         flex: 0 0 100%;
         box-sizing: border-box;
         padding-right: 1rem;
       }
-    
+
       .spot-title {
         font-size: 1.875rem;
         font-weight: 700;
         color: #f97316;
         margin-bottom: 0.5rem;
       }
-    
+
       .spot-description {
         font-size: 1.125rem;
         line-height: 1.75rem;
@@ -323,7 +323,7 @@
         updatePosition();
         setInterval(nextSlide, 10000);
     </script>
-    
+
 
     <!-- Halaman Location -->
     <section class="relative w-full h-screen bg-white p-10 mb-12">
@@ -523,7 +523,28 @@
         </div>
         <div class="max-w-7xl mx-auto px-4 py-8 mb-24">
             <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-3 space-y-3">
-                @foreach (['gallery2.svg', 'gallery3.svg', 'gallery4.svg', 'gallery5.svg', 'gallery6.svg', 'gallery1.svg', 'gallery2.svg', 'gallery3.svg', 'gallery5.svg', 'gallery2.svg', 'gallery3.svg', 'gallery4.svg', 'gallery5.svg', 'gallery6.svg', 'gallery1.svg', 'gallery2.svg', 'gallery3.svg', 'gallery5.svg', 'gallery5.svg'] as $image)
+                @foreach ([
+                    'gallery2.svg',
+                    'gallery3.svg',
+                    'gallery4.svg',
+                    'gallery5.svg',
+                    'gallery6.svg',
+                    'gallery1.svg',
+                    'gallery2.svg',
+                    'gallery3.svg',
+                    'gallery5.svg',
+                    'gallery2.svg',
+                    'gallery3.svg',
+                    'gallery4.svg',
+                    'gallery5.svg',
+                    'gallery6.svg',
+                    'gallery1.svg',
+                    'gallery2.svg',
+                    'gallery3.svg',
+                    'gallery5.svg',
+                    'gallery5.svg'
+                    ]
+                    as $image)
                     <div class="break-inside-avoid overflow-hidden shadow hover:shadow-lg transition">
                         <img src="{{ asset('images/gallery/' . $image) }}" alt="Galeri"
                             class="w-full h-auto block hover:scale-105 transition-transform duration-700">
