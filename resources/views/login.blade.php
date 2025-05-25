@@ -22,5 +22,5 @@
                 <p class="text-base text-[#2C3930]">Atau</p>
                 <p class="text-base text-[#2C3930]">Kembali ke <a href="/" class="text-base font-bold text-[#2C3930]">Beranda</a></p>
             </div>
-</body>
+    </body>
 </html>

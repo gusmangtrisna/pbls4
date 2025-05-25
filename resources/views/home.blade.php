@@ -137,13 +137,16 @@
       .testimonial-wrapper {
         overflow: hidden;
         position: relative;
+        width: 100%;
         height: 260px;
+        /* border: 2px solid white; */
       }
 
       .testimonial-track {
         display: flex;
         transition: transform 5s ease-in-out; /* Transisi lebih lambat 10 detik */
-        width: fit-content;
+        width:660px;
+        /* border: 2px solid white; */
       }
 
       .testimonial-slide {
@@ -162,6 +165,7 @@
       .spot-description {
         font-size: 1.125rem;
         line-height: 1.75rem;
+        width: 100%;
         color: #ffffff;
       }
     </style>
@@ -179,7 +183,7 @@
         </div>
 
         <!-- Carousel -->
-        <div class="w-full lg:w-1/2 bg-[#2C3930] text-white px-8 py-10 flex flex-col justify-center">
+        <div class="w-full lg:w-1/2 border border-black bg-[#2C3930] text-white px-8 py-10 flex flex-col justify-center">
           <div class="testimonial-wrapper">
             <div class="testimonial-track" id="testimonialTrack">
               <!-- Clone last -->
@@ -372,90 +376,54 @@
             </div>
     </section>
 
-    <!-- Halaman Harga Tiket -->
-    <div class="flex justify-center">
-        <h1 class="text-5xl text-[#2C3930] text-center font-semibold max-w-2xl text-pretty tracking-tight">
-            Pesan Tiket Masuk Taman Edelweis Sekarang
-        </h1>
-    </div>
-
-    <div class="flex justify-center mt-3">
-        <p class="text-gray-600 font-sans text-xl text-center">
-            Rasakan keindahan alam Bali yang belum banyak dijelajahi
-        </p>
-    </div>
-
-    <div class="flex flex-col items-center justify-center px-6">
-        <div class="flex justify-center items-center gap-20 mt-10 flex-wrap">
-            <div class="bg-white rounded-2xl border border-[#2C3930] p-10 w-[550px]">
-                <h2 class="font-bold text-2xl text-[#2C3930] mb-10">Entrance Fee Domestic</h2>
-                <ul class="text-[#2C3930] text-xl space-y-3">
-                    <li>• <span class="font-bold">Dewasa</span> : Rp 25.000 / Orang</li>
-                    <li>• <span class="font-bold">Anak</span> : Rp 15.000 / Orang</li>
-                </ul>
-            </div>
-            <div class="bg-white text-[#2C3930] rounded-2xl border border-[#2C3930] p-10 w-[550px]">
-                <h2 class="font-bold text-2xl text-[#2C3930] mb-10">Entrance Fee International</h2>
-                <ul class="text-xl space-y-3">
-                    <li>• <span class="font-bold">Dewasa</span> : Rp 50.000 / Orang</li>
-                    <li>• <span class="font-bold">Anak</span> : Rp 30.000 / Orang</li>
-                </ul>
-            </div>
-        </div>
-        <button
-            class="bg-[#2C3930] text-white font-bold text-xl px-5 py-3 rounded-lg shadow-lg hover:bg-[#364c3d] mt-10 mb-20">
-            Pesan Tiket
-        </button>
-    </div>
-
-    <!-- Tombol Chatbot -->
-    <button id="chatbot-toggle-btn"
-        class="fixed bottom-4 right-6 bg-[#2C3930] hover:bg-[#364c3d] text-white p-3 rounded-full shadow-lg transition duration-300 ease-in-out z-50"
-        aria-label="Chatbot">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+<!-- Tombol Chatbot -->
+<button id="chatbot-toggle-btn"
+class="fixed bottom-4 right-6 bg-[#2C3930] hover:bg-[#364c3d] text-white p-3 rounded-full shadow-lg transition duration-300 ease-in-out z-50"
+aria-label="Chatbot">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
             stroke="currentColor" class="w-10 h-10">
             <path stroke-linecap="round" stroke-linejoin="round"
-                d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+            d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
         </svg>
     </button>
 
     <!-- Chatbot Popup -->
     <div id="chatbot-popup"
-        class="hidden fixed bottom-[calc(4rem+1.5rem)] right-0 mr-6 bg-white p-6 rounded-lg border border-[#e5e7eb] w-[500px] h-[610px] z-50 transition-all duration-300 ease-in-out transform scale-95 opacity-0"
-        style="box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgb(0 0 0 / 0.05);">
+    class="hidden fixed bottom-[calc(4rem+1.5rem)] right-0 mr-6 bg-white p-6 rounded-lg border border-[#e5e7eb] w-[500px] h-[610px] z-50 transition-all duration-300 ease-in-out transform scale-95 opacity-0"
+    style="box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgb(0 0 0 / 0.05);">
 
-        <div class="flex flex-col space-y-1.5 pb-6">
-            <h2 class="font-semibold text-lg tracking-tight">Chatbot</h2>
-            <p class="text-sm text-[#6b7280] leading-3">Silahkan Tanyakan Seputar Taman Edelweis Bali</p>
-        </div>
+    <div class="flex flex-col space-y-1.5 pb-6">
+        <h2 class="font-semibold text-lg tracking-tight">Chatbot</h2>
+        <p class="text-sm text-[#6b7280] leading-3">Silahkan Tanyakan Seputar Taman Edelweis Bali</p>
+    </div>
 
-        <!-- Chat Container -->
-        <div class="pr-4 h-[450px]" style="min-width: 100%; display: table;">
+    <!-- Chat Container -->
+    <div class="pr-4 h-[450px]" style="min-width: 100%; display: table;">
 
-            <!-- Chat AI nya -->
-            <div class="flex gap-3 my-4 text-gray-600 text-sm flex-1">
-                <span class="relative flex shrink-0 overflow-hidden rounded-full w-8 h-8">
-                    <div class="rounded-full bg-gray-100 border p-1">
-                        <svg stroke="none" fill="black" stroke-width="1.5" viewBox="0 0 24 24"
-                            aria-hidden="true" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+        <!-- Chat AI nya -->
+        <div class="flex gap-3 my-4 text-gray-600 text-sm flex-1">
+            <span class="relative flex shrink-0 overflow-hidden rounded-full w-8 h-8">
+                <div class="rounded-full bg-gray-100 border p-1">
+                    <svg stroke="none" fill="black" stroke-width="1.5" viewBox="0 0 24 24"
+                    aria-hidden="true" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z">
+                            d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z">
                             </path>
                         </svg>
                     </div>
                 </span>
                 <p class="leading-relaxed"><span class="block font-bold text-gray-700">AI </span>Hi, how can I help
                     you today?</p>
-            </div>
+                </div>
 
-            <!-- Chat Usernya -->
-            <div class="flex gap-3 my-4 text-gray-600 text-sm flex-1">
-                <span class="relative flex shrink-0 overflow-hidden rounded-full w-8 h-8">
-                    <div class="rounded-full bg-gray-100 border p-1">
-                        <svg stroke="none" fill="black" viewBox="0 0 16 16" height="20" width="20"
+                <!-- Chat Usernya -->
+                <div class="flex gap-3 my-4 text-gray-600 text-sm flex-1">
+                    <span class="relative flex shrink-0 overflow-hidden rounded-full w-8 h-8">
+                        <div class="rounded-full bg-gray-100 border p-1">
+                            <svg stroke="none" fill="black" viewBox="0 0 16 16" height="20" width="20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
-                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z">
+                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z">
                             </path>
                         </svg>
                     </div>
@@ -478,63 +446,89 @@
                 <p class="leading-relaxed"><span class="block font-bold text-gray-700">AI </span>Sorry, I couldn't
                     find any
                     information...</p>
+                </div>
+            </div>
+
+            <!-- Input Form -->
+            <div class="flex items-center pt-0">
+                <form class="flex items-center justify-center w-full space-x-2">
+                    <input
+                    class="flex h-10 w-full rounded-md border border-[#e5e7eb] px-3 py-2 text-sm placeholder-[#6b7280] focus:outline-none focus:ring-2 focus:ring-[#9ca3af] text-[#030712] focus-visible:ring-offset-2"
+                    placeholder="Type your message" value="">
+                    <button
+                    class="inline-flex items-center justify-center rounded-md text-sm font-medium text-white bg-[#2C3930] hover:bg-[#364c3d] h-10 px-4 py-2">
+                    Send</button>
+                </form>
             </div>
         </div>
 
-        <!-- Input Form -->
-        <div class="flex items-center pt-0">
-            <form class="flex items-center justify-center w-full space-x-2">
-                <input
-                    class="flex h-10 w-full rounded-md border border-[#e5e7eb] px-3 py-2 text-sm placeholder-[#6b7280] focus:outline-none focus:ring-2 focus:ring-[#9ca3af] text-[#030712] focus-visible:ring-offset-2"
-                    placeholder="Type your message" value="">
-                <button
-                    class="inline-flex items-center justify-center rounded-md text-sm font-medium text-white bg-[#2C3930] hover:bg-[#364c3d] h-10 px-4 py-2">
-                    Send</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Halaman Gallery -->
-    <section id="" class="relative mt-10 w-full h-auto">
-        <div class="text-center my-5">
-            <h1 class="text-[48px] font-semibold text-[#2C3930]">Gallery</h1>
-            <p class="text-xl">Keindahan Alam yang ada pada kami dari dulu sampai saat ini</p>
-        </div>
-        <div class="max-w-7xl mx-auto px-4 py-8 mb-24">
-            <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-3 space-y-3">
-                @foreach ([
-                    'gallery2.svg',
-                    'gallery3.svg',
-                    'gallery4.svg',
-                    'gallery5.svg',
-                    'gallery6.svg',
-                    'gallery1.svg',
-                    'gallery2.svg',
-                    'gallery3.svg',
-                    'gallery5.svg',
-                    'gallery2.svg',
-                    'gallery3.svg',
-                    'gallery4.svg',
-                    'gallery5.svg',
-                    'gallery6.svg',
-                    'gallery1.svg',
-                    'gallery2.svg',
-                    'gallery3.svg',
-                    'gallery5.svg',
-                    'gallery5.svg'
-                    ]
+        <!-- Halaman Gallery -->
+        <section id="" class="relative mt-10 w-full h-auto">
+            <div class="text-center my-5">
+                <h1 class="text-[48px] font-semibold text-[#2C3930]">Gallery</h1>
+                <p class="text-xl">Keindahan Alam yang ada pada kami dari dulu sampai saat ini</p>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 py-2 mb-24">
+                <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-3 space-y-3">
+                    @foreach ([
+                        'gallery2.svg',
+                        'gallery3.svg',
+                        'gallery4.svg',
+                        'gallery5.svg',
+                        'gallery6.svg',
+                        'gallery1.svg',
+                        'gallery2.svg',
+                        'gallery3.svg',
+                        'gallery5.svg',
+                        'gallery2.svg',
+                        'gallery3.svg',
+                        'gallery4.svg',
+                        'gallery5.svg',
+                        'gallery3.svg',
+                        'gallery4.svg',
+                        'gallery5.svg',
+                        'gallery3.svg',
+                        'gallery4.svg',
+                        'gallery5.svg',
+                        ]
                     as $image)
                     <div class="break-inside-avoid overflow-hidden shadow hover:shadow-lg transition">
                         <img src="{{ asset('images/gallery/' . $image) }}" alt="Galeri"
-                            class="w-full h-auto block hover:scale-105 transition-transform duration-700">
+                        class="w-full h-auto block hover:scale-105 transition-transform duration-700">
                     </div>
-                @endforeach
+                    @endforeach
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
+        <!--- Halaman Tiket --->
+        <section class="relative bg-white">
+            <div class="w-full h-auto max-w-6xl mx-auto flex flex-col justify-center items-center">
+                <h1 class="text-[48px] text-[#2C3930] font-semibold">Ticket</h1>
+                <h2 class="text-[18px] text-[#2C3930] font-semibold">Lorem ipsum dolor sit amet.</h2>
+                <div class="grid grid-cols-2 justify-between items-center mb-10 gap-8">
+                    <h1 class="text-center mt-5 font-bold text-[24px]">Beli Tiket Sekarang</h1>
+                    <h1 class="text-center mt-5 font-bold text-[24px]">Buy Ticket Now</h1>
+
+                    <div class="w-[500px] h-[170px] p-5 border rounded-xl flex flex-col items-center justify-center gap-2">
+                        <h2 class="text-[24px] font-semibold text-center text-[#2C3930]">Tiket Domestik</h2>
+                        <p class="text-center text-[#9E9E9E]">Tiket untuk pengunjung domestik</p>
+                        <a href="{{ url('/tiketLokal') }}" class="flex justify-center items-center w-[350px] h-[50px] bg-[#2C3930] rounded-3xl text-white font-semibold">Beli Tiket</a>
+                    </div>
+
+                    <div class="w-[500px] h-[170px] p-5 border rounded-xl flex flex-col items-center justify-center gap-2">
+                        <h2 class="text-[24px] font-semibold text-center text-[#2C3930]">Foreigner Ticket</h2>
+                        <p class="text-center text-[#9E9E9E]">Tickets for foreigner visitors</p>
+                        <a href="{{ url('/tiketWna') }}" class="flex justify-center items-center w-[350px] h-[50px] bg-[#2C3930] rounded-3xl font-semibold text-white ">Buy Ticket</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+        <script>
         AOS.init();
     </script>
 
