@@ -336,7 +336,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                d="M15 11a3 3 0 11-6 0 3 3 0 0 1 6 0z" />
                         </svg>
                         <p class="text-gray-700">Jl. Raya Kintamani, Songan A, Kec. Kintamani, Kabupaten Bangli, Bali
                         </p>
@@ -502,24 +502,74 @@ aria-label="Chatbot">
         </section>
 
         <!--- Halaman Tiket --->
-        <section class="relative bg-white">
+        <section class="relative bg-white mt-24 mb-16">
             <div class="w-full h-auto max-w-6xl mx-auto flex flex-col justify-center items-center">
-                <h1 class="text-[48px] text-[#2C3930] font-semibold">Ticket</h1>
-                <h2 class="text-[18px] text-[#2C3930] font-semibold">Lorem ipsum dolor sit amet.</h2>
-                <div class="grid grid-cols-2 justify-between items-center mb-10 gap-8">
-                    <h1 class="text-center mt-5 font-bold text-[24px]">Beli Tiket Sekarang</h1>
-                    <h1 class="text-center mt-5 font-bold text-[24px]">Buy Ticket Now</h1>
+                <h1 class="text-[40px] md:text-[48px] text-[#2C3930] font-semibold">Ticket</h1>
+                <h2 class="text-[16px] md:text-[20px] text-[#2C3930] font-semibold mb-8">Lorem ipsum dolor sit amet.</h2>
+                <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-8">
 
-                    <div class="w-[500px] h-[170px] p-5 border rounded-xl flex flex-col items-center justify-center gap-2">
-                        <h2 class="text-[24px] font-semibold text-center text-[#2C3930]">Tiket Domestik</h2>
-                        <p class="text-center text-[#9E9E9E]">Tiket untuk pengunjung domestik</p>
-                        <a href="{{ url('/tiketLokal') }}" class="flex justify-center items-center w-[350px] h-[50px] bg-[#2C3930] rounded-3xl text-white font-semibold">Beli Tiket</a>
+                    <div class="w-full md:w-[500px] h-auto p-5 border rounded-xl flex flex-col items-center justify-center gap-2 bg-white shadow">
+                        <h2 class="text-[20px] md:text-[24px] font-semibold text-center text-[#2C3930]">Tiket Domestik</h2>
+                        <p class="text-center text-[#9E9E9E] text-[16px] md:text-[18px] mb-5">Tiket untuk pengunjung domestik</p>
+                        <ul class="space-y-4 text-[15px] md:text-[17px] text-gray-600 pl-0 mb-9">
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Warga Negara Indonesia (WNI)
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 11-4 0 2 2 0 014 0zM17 21v-2a4 4 0 00-8 0v2"/>
+                                </svg>
+                                Menunjukkan identitas resmi (KTP/SIM/Pelajar)
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zm0 0V4m0 7v7"/>
+                                </svg>
+                                Pembayaran hanya melalui metode yang tersedia
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2"/>
+                                </svg>
+                                Tiket berlaku hanya untuk satu kali kunjungan
+                            </li>
+                        </ul>
+                        <a href="{{ url('/tiketLokal') }}" class="flex justify-center items-center w-full h-[50px] bg-[#2C3930] rounded-3xl text-white font-semibold text-[16px] md:text-[18px] mt-4">Beli Tiket</a>
                     </div>
 
-                    <div class="w-[500px] h-[170px] p-5 border rounded-xl flex flex-col items-center justify-center gap-2">
-                        <h2 class="text-[24px] font-semibold text-center text-[#2C3930]">Foreigner Ticket</h2>
-                        <p class="text-center text-[#9E9E9E]">Tickets for foreigner visitors</p>
-                        <a href="{{ url('/tiketWna') }}" class="flex justify-center items-center w-[350px] h-[50px] bg-[#2C3930] rounded-3xl font-semibold text-white ">Buy Ticket</a>
+                    <div class="w-full md:w-[500px] h-auto p-5 border rounded-xl flex flex-col items-center justify-center gap-2 bg-white shadow">
+                        <h2 class="text-[20px] md:text-[24px] font-semibold text-center text-[#2C3930]">Foreigner Ticket</h2>
+                        <p class="text-center text-[#9E9E9E] text-[16px] md:text-[18px] mb-5">Tickets for foreigner visitors</p>
+                        <ul class="space-y-4 text-[15px] md:text-[17px] text-gray-600 pl-0 mb-9">
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                Non-Indonesian citizens
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 11-4 0 2 2 0 014 0zM17 21v-2a4 4 0 00-8 0v2"/>
+                                </svg>
+                                Show valid passport or ID
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zm0 0V4m0 7v7"/>
+                                </svg>
+                                Payment via available methods only
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2"/>
+                                </svg>
+                                Ticket valid for single entry only
+                            </li>
+                        </ul>
+                        <a href="{{ url('/tiketWna') }}" class="flex justify-center items-center w-full h-[50px] bg-[#2C3930] rounded-3xl font-semibold text-white text-[16px] md:text-[18px] mt-4">Buy Ticket</a>
                     </div>
                 </div>
             </div>
