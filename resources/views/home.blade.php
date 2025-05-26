@@ -132,9 +132,9 @@
     <section id="about" class="bg-gray-100 py-20 relative z-10">
         <div class="container mx-auto px-4">
             <div data-aos="fade-up" data-aos-duration="1000" class="text-center mb-12">
-                <h2 class="text-4xl md:text-5xl font-semibold text-[#2C3930] mb-4">
+                <h1 class="text-4xl md:text-5xl font-semibold text-[#2C3930] mb-4">
                     About Us
-                </h2>
+                </h1>
             </div>
 
             <div class="max-w-7xl mx-auto">
@@ -173,6 +173,10 @@
 
     <!-- Halaman Location -->
     <section id="location" class="relative w-full h-screen bg-white p-10 mb-12">
+        <div class="flex flex-col justify-center items-center mt-12 mb-10">
+        <h1 class="text-4xl md:text-5xl font-semibold text-[#2C3930] mb-4">Location</h1>
+        <p class="text-2xl font-medium text-[#2C3930]">Kunjungi kami pada lokasi yang telah ditentukan</p>
+        </div>
         <!-- Map Container -->
         <div class="w-full h-full relative">
             <!-- Google Maps Iframe -->
@@ -327,7 +331,7 @@
 
         <!-- Halaman Gallery -->
         <section id="gallery" class="relative mt-10 w-full h-auto">
-            <div class="text-center my-5">
+            <div class="text-center mt-48">
                 <h1 class="text-[48px] font-semibold text-[#2C3930]">Gallery</h1>
                 <p class="text-xl">Keindahan Alam yang ada pada kami dari dulu sampai saat ini</p>
             </div>
@@ -370,7 +374,7 @@
         <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-8">
 
             <!-- Tiket Domestik -->
-            <div class="w-full md:w-[500px] h-auto p-5 border rounded-xl flex flex-col items-center justify-center gap-2 bg-white shadow">
+            <div class="w-full md:w-[500px] mx-auto h-auto p-5 border rounded-xl flex flex-col items-center justify-center gap-2 bg-white shadow">
                 <h2 class="text-[20px] md:text-[24px] font-semibold text-center text-[#2C3930]">Tiket Domestik</h2>
                 <p class="text-center text-[#9E9E9E] text-[16px] md:text-[18px] mb-5">Tiket untuk pengunjung domestik</p>
                 <ul class="space-y-4 text-[15px] md:text-[17px] text-gray-600 pl-0 mb-9">
@@ -407,7 +411,7 @@
             </div>
 
             <!-- Tiket Foreigner -->
-            <div class="w-full md:w-[500px] h-auto p-5 border rounded-xl flex flex-col items-center justify-center gap-2 bg-white shadow">
+            <div class="w-full md:w-[500px] mx-auto h-auto p-5 border rounded-xl flex flex-col items-center justify-center gap-2 bg-white shadow">
                 <h2 class="text-[20px] md:text-[24px] font-semibold text-center text-[#2C3930]">Foreigner Ticket</h2>
                 <p class="text-center text-[#9E9E9E] text-[16px] md:text-[18px] mb-5">Tickets for foreigner visitors</p>
                 <ul class="space-y-4 text-[15px] md:text-[17px] text-gray-600 pl-0 mb-9">
