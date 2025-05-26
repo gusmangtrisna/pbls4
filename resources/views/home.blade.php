@@ -502,90 +502,115 @@ aria-label="Chatbot">
         </section>
 
         <!--- Halaman Tiket --->
-        <section class="relative bg-white mt-24 mb-16">
-            <div class="w-full h-auto max-w-6xl mx-auto flex flex-col justify-center items-center">
-                <h1 class="text-[40px] md:text-[48px] text-[#2C3930] font-semibold">Ticket</h1>
-                <h2 class="text-[16px] md:text-[20px] text-[#2C3930] font-semibold mb-8">Lorem ipsum dolor sit amet.</h2>
-                <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-8">
+        @php
+    $isLoggedIn = Auth::check();
+@endphp
 
-                    <div class="w-full md:w-[500px] h-auto p-5 border rounded-xl flex flex-col items-center justify-center gap-2 bg-white shadow">
-                        <h2 class="text-[20px] md:text-[24px] font-semibold text-center text-[#2C3930]">Tiket Domestik</h2>
-                        <p class="text-center text-[#9E9E9E] text-[16px] md:text-[18px] mb-5">Tiket untuk pengunjung domestik</p>
-                        <ul class="space-y-4 text-[15px] md:text-[17px] text-gray-600 pl-0 mb-9">
-                            <li class="flex items-start gap-2">
-                                <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
-                                </svg>
-                                Warga Negara Indonesia (WNI)
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 11-4 0 2 2 0 014 0zM17 21v-2a4 4 0 00-8 0v2"/>
-                                </svg>
-                                Menunjukkan identitas resmi (KTP/SIM/Pelajar)
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <svg class="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zm0 0V4m0 7v7"/>
-                                </svg>
-                                Pembayaran hanya melalui metode yang tersedia
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <svg class="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2"/>
-                                </svg>
-                                Tiket berlaku hanya untuk satu kali kunjungan
-                            </li>
-                        </ul>
-                        <a href="{{ url('/tiketLokal') }}" class="flex justify-center items-center w-full h-[50px] bg-[#2C3930] rounded-3xl text-white font-semibold text-[16px] md:text-[18px] mt-4">Beli Tiket</a>
-                    </div>
+<!--- Halaman Tiket --->
+<section class="relative bg-white mt-24 mb-16">
+    <div class="w-full h-auto max-w-6xl mx-auto flex flex-col justify-center items-center">
+        <h1 class="text-[40px] md:text-[48px] text-[#2C3930] font-semibold">Ticket</h1>
+        <h2 class="text-[16px] md:text-[20px] text-[#2C3930] font-semibold mb-8">Lorem ipsum dolor sit amet.</h2>
+        <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-8">
 
-                    <div class="w-full md:w-[500px] h-auto p-5 border rounded-xl flex flex-col items-center justify-center gap-2 bg-white shadow">
-                        <h2 class="text-[20px] md:text-[24px] font-semibold text-center text-[#2C3930]">Foreigner Ticket</h2>
-                        <p class="text-center text-[#9E9E9E] text-[16px] md:text-[18px] mb-5">Tickets for foreigner visitors</p>
-                        <ul class="space-y-4 text-[15px] md:text-[17px] text-gray-600 pl-0 mb-9">
-                            <li class="flex items-start gap-2">
-                                <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
-                                </svg>
-                                Non-Indonesian citizens
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 11-4 0 2 2 0 014 0zM17 21v-2a4 4 0 00-8 0v2"/>
-                                </svg>
-                                Show valid passport or ID
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <svg class="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zm0 0V4m0 7v7"/>
-                                </svg>
-                                Payment via available methods only
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <svg class="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2"/>
-                                </svg>
-                                Ticket valid for single entry only
-                            </li>
-                        </ul>
-                        <a href="{{ url('/tiketWna') }}" class="flex justify-center items-center w-full h-[50px] bg-[#2C3930] rounded-3xl font-semibold text-white text-[16px] md:text-[18px] mt-4">Buy Ticket</a>
-                    </div>
-                </div>
+            <!-- Tiket Domestik -->
+            <div class="w-full md:w-[500px] h-auto p-5 border rounded-xl flex flex-col items-center justify-center gap-2 bg-white shadow">
+                <h2 class="text-[20px] md:text-[24px] font-semibold text-center text-[#2C3930]">Tiket Domestik</h2>
+                <p class="text-center text-[#9E9E9E] text-[16px] md:text-[18px] mb-5">Tiket untuk pengunjung domestik</p>
+                <ul class="space-y-4 text-[15px] md:text-[17px] text-gray-600 pl-0 mb-9">
+                    <li class="flex items-start gap-2">
+                        <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        Warga Negara Indonesia (WNI)
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 11-4 0 2 2 0 014 0zM17 21v-2a4 4 0 00-8 0v2"/>
+                        </svg>
+                        Menunjukkan identitas resmi (KTP/SIM/Pelajar)
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <svg class="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zm0 0V4m0 7v7"/>
+                        </svg>
+                        Pembayaran hanya melalui metode yang tersedia
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <svg class="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2"/>
+                        </svg>
+                        Tiket berlaku hanya untuk satu kali kunjungan
+                    </li>
+                </ul>
+                @if($isLoggedIn)
+                    <a href="{{ url('/tiketLokal') }}" class="flex justify-center items-center w-full h-[50px] bg-[#2C3930] rounded-3xl text-white font-semibold text-[16px] md:text-[18px] mt-4">Beli Tiket</a>
+                @else
+                    <a href="{{ url('/tiketLokal') }}" class="flex justify-center items-center w-full h-[50px] bg-[#2C3930] hover:bg-[#364c3d] rounded-3xl text-white font-semibold text-[16px] md:text-[18px] mt-4">Login untuk membeli</a>
+                @endif
             </div>
-        </section>
 
+            <!-- Tiket Foreigner -->
+            <div class="w-full md:w-[500px] h-auto p-5 border rounded-xl flex flex-col items-center justify-center gap-2 bg-white shadow">
+                <h2 class="text-[20px] md:text-[24px] font-semibold text-center text-[#2C3930]">Foreigner Ticket</h2>
+                <p class="text-center text-[#9E9E9E] text-[16px] md:text-[18px] mb-5">Tickets for foreigner visitors</p>
+                <ul class="space-y-4 text-[15px] md:text-[17px] text-gray-600 pl-0 mb-9">
+                    <li class="flex items-start gap-2">
+                        <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        Non-Indonesian citizens
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 11-4 0 2 2 0 014 0zM17 21v-2a4 4 0 00-8 0v2"/>
+                        </svg>
+                        Show valid passport or ID
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <svg class="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zm0 0V4m0 7v7"/>
+                        </svg>
+                        Payment via available methods only
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <svg class="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2"/>
+                        </svg>
+                        Ticket valid for single entry only
+                    </li>
+                </ul>
+                @if($isLoggedIn)
+                    <a href="{{ url('/tiketWna') }}" class="flex justify-center items-center w-full h-[50px] bg-[#2C3930] rounded-3xl font-semibold text-white text-[16px] md:text-[18px] mt-4">Buy Ticket</a>
+                @else
+                    <a href="{{ url('/tiketWna') }}" class="flex justify-center items-center w-full h-[50px] bg-[#2C3930] hover:bg-[#364c3d] rounded-3xl font-semibold text-white text-[16px] md:text-[18px] mt-4">Login to buy</a>
+                @endif
+            </div>
+        </div>
+    </div>
+</section>
 
+<div id="loginModal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-xl p-8 shadow-lg max-w-sm w-full">
+        <h2 class="text-xl font-bold mb-4 text-center">Login Dulu</h2>
+        <p class="mb-6 text-center text-gray-600">Anda harus login untuk membeli tiket.</p>
+        <a href="{{ url('/login') }}" class="block w-full text-center bg-[#2C3930] text-white rounded-lg py-3 font-semibold hover:bg-[#364c3d] transition mb-2">Login</a>
+        <button onclick="document.getElementById('loginModal').classList.add('hidden')" class="w-full py-2 rounded-lg border mt-2">Tutup</button>
+    </div>
+</div>
 
-        <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-        <script>
-        AOS.init();
-    </script>
+<!-- Tambahkan popup khusus tourist setelah popup login lokal -->
+<div id="loginModalTourist" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-xl p-8 shadow-lg max-w-sm w-full">
+        <h2 class="text-xl font-bold mb-4 text-center">Please Login</h2>
+        <p class="mb-6 text-center text-gray-600">You must login to buy a ticket.</p>
+        <a href="{{ url('/login') }}" class="block w-full text-center bg-[#2C3930] text-white rounded-lg py-3 font-semibold hover:bg-[#364c3d] transition mb-2">Login</a>
+        <button onclick="document.getElementById('loginModalTourist').classList.add('hidden')" class="w-full py-2 rounded-lg border mt-2">Close</button>
+    </div>
+</div>
 
-    <!-- Pop up Chatbot & Animasi Pop up -->
     <script>
-        const toggleBtn = document.getElementById("chatbot-toggle-btn");
-        const popup = document.getElementById("chatbot-popup");
+      const popup = document.getElementById("chatbot-popup");
 
         toggleBtn.addEventListener("click", () => {
             if (popup.classList.contains("hidden")) {
