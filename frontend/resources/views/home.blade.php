@@ -20,7 +20,7 @@
             <div class="mx-auto max-w-2xl py-18 sm:py-24 lg:py-48">
                 <div class="hidden sm:mb-8 sm:flex sm:justify-center">
                 </div>
-                <div class="text-center">
+                <div data-aos="fade-up" data-aos-duration="1200" class="text-center">
                     <h1 class="text-balance text-5xl font-semibold tracking-tight text-[#2C3930] sm:text-7xl">Selamat
                         Datang di Taman Edelweis</h1>
                     <p class="mt-8 text-pretty text-lg font-medium text-gray-900 sm:text-xl/8">Anim aute id magna aliqua
@@ -273,11 +273,11 @@
 
     <!-- Halaman Gallery -->
     <section id="" class="relative mt-10 w-full h-auto">
-        <div class="text-center my-5">
+        <div data-aos="fade-up" data-aos-duration="1000" class="text-center my-5">
             <h1 class="text-[48px] font-semibold text-[#2C3930]">Gallery</h1>
             <p class="text-xl">Keindahan Alam yang ada pada kami dari dulu sampai saat ini</p>
         </div>
-        <div class="max-w-7xl mx-auto px-4 py-8 mb-24">
+        <div data-aos="fade-up" data-aos-duration="1000" class="max-w-7xl mx-auto px-4 py-8 mb-24">
             <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-3 space-y-3">
                 @foreach (['gallery2.svg', 'gallery3.svg', 'gallery4.svg', 'gallery5.svg', 'gallery6.svg', 'gallery1.svg', 'gallery2.svg', 'gallery3.svg', 'gallery5.svg', 'gallery2.svg', 'gallery3.svg', 'gallery4.svg', 'gallery5.svg', 'gallery6.svg', 'gallery1.svg', 'gallery2.svg', 'gallery3.svg', 'gallery5.svg', 'gallery5.svg'] as $image)
                     <div class="break-inside-avoid overflow-hidden shadow hover:shadow-lg transition">
@@ -290,9 +290,7 @@
     </section>
 
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    <script>AOS.init();</script>
 
 </body>
 
