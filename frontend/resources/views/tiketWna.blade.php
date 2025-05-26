@@ -19,7 +19,7 @@
                 </div>
 
                 <!-- Sub Judul -->
-                <div class="mb-3 font-bold text-[18px] text-center md:text-left">Pilih Tiket</div>
+                <div class="mb-3 font-bold text-[18px] text-center md:text-left">Choose Ticket</div>
 
                 <form action="/tiket" method="POST" onsubmit="return validateForm()">
                     @csrf
@@ -108,7 +108,7 @@
                         </div>
 
                         <!-- Nama -->
-                        <input type="text" name="nama" id="nama" placeholder="Nama"
+                        <input type="text" name="nama" id="nama" placeholder="Name"
                             class="pl-3 bg-white border w-full h-[40px] rounded" required>
 
                         <!-- Tanggal -->
