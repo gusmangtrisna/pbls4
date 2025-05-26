@@ -27,7 +27,7 @@
                         ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam
                         occaecat.</p>
                     <div class="mt-10 flex items-center justify-center gap-x-6">
-                        <a href="#"
+                        <a href="{{ url('/#ticket') }}"
                             class="rounded-md bg-[#2C3930] px-5 py-3 text-base font-semibold text-white shadow-sm hover:bg-[#364c3d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2C3930]">Pesan
                             Tiket Masuk</a>
                     </div>
@@ -44,7 +44,7 @@
     <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-transparent to-white z-10"></div>
 
     <!-- Halaman About -->
-    <section id="about">
+    <section>
         <div class="bg-white py-12 sm:py-20">
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
                 <div data-aos="fade-up" data-aos-duration="1000" class="mx-auto max-w-3xl lg:text-center">
@@ -128,188 +128,44 @@
         </div>
     </section>
 
-    <style>
-      .custom-container-rounded {
-        border-top-left-radius: 150px;
-        border-bottom-right-radius: 150px;
-      }
-
-      .testimonial-wrapper {
-        overflow: hidden;
-        position: relative;
-        width: 100%;
-        height: 260px;
-        /* border: 2px solid white; */
-      }
-
-      .testimonial-track {
-        display: flex;
-        transition: transform 5s ease-in-out; /* Transisi lebih lambat 10 detik */
-        width:660px;
-        /* border: 2px solid white; */
-      }
-
-      .testimonial-slide {
-        flex: 0 0 100%;
-        box-sizing: border-box;
-        padding-right: 1rem;
-      }
-
-      .spot-title {
-        font-size: 1.875rem;
-        font-weight: 700;
-        color: #f97316;
-        margin-bottom: 0.5rem;
-      }
-
-      .spot-description {
-        font-size: 1.125rem;
-        line-height: 1.75rem;
-        width: 100%;
-        color: #ffffff;
-      }
-    </style>
-
-    <section class="w-full py-16 bg-gray-100 px-10">
-      <div class="w-full custom-container-rounded overflow-hidden shadow-lg flex flex-col lg:flex-row bg-white">
-
-        <!-- Gambar -->
-        <div class="w-full lg:w-1/2">
-          <img
-            src="{{ asset('images/background.svg') }}"
-            alt="Client"
-            class="w-full h-full object-cover"
-          />
+    <!-- Halaman About -->
+    <section id="about">
+        <div data-aos="fade-up" data-aos-duration="1000" class="mx-auto lg:text-center mt-12">
+            <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-[#2C3930] sm:text-5xl lg:text-balance">
+                About Us
+            </p>
         </div>
-
-        <!-- Carousel -->
-        <div class="w-full lg:w-1/2 border border-black bg-[#2C3930] text-white px-8 py-10 flex flex-col justify-center">
-          <div class="testimonial-wrapper">
-            <div class="testimonial-track" id="testimonialTrack">
-              <!-- Clone last -->
-              <div class="testimonial-slide">
-                <h3 class="spot-title">Jalur Pendakian (Trekking)</h3>
-                <p class="spot-description">
-                  Jalur pendakian di tempat ini menawarkan pengalaman yang sangat memuaskan bagi para petualang. Rute yang menantang ini mengarah ke Bukit Asah dan Pura Lempuyang, dua tempat yang sangat populer di kalangan pendaki. Selain itu, pemandangan sekitar selama perjalanan juga sangat memukau, memberikan kesan tersendiri bagi setiap orang yang melaluinya.
-                </p>
-              </div>
-
-              <!-- Slides -->
-              <div class="testimonial-slide">
-                <h3 class="spot-title">Hamparan Bunga Edelweis</h3>
-                <p class="spot-description">
-                  Hamparan bunga edelweis yang menakjubkan menjadi daya tarik utama di tempat ini. Dengan latar belakang pegunungan yang indah, taman ini memiliki ladang bunga edelweis (Anaphalis javanica) yang tumbuh subur dan menciptakan pemandangan alam yang memukau. Keindahan pemandangan ini sering kali membuat pengunjung merasa seperti berada di dunia yang berbeda, penuh dengan kedamaian dan keheningan.
-                </p>
-              </div>
-              <div class="testimonial-slide">
-                <h3 class="spot-title">Spot Foto Estetik</h3>
-                <p class="spot-description">
-                  Di sekitar area ini, terdapat berbagai spot foto yang sangat estetik dan menarik. Spot-spot ini dirancang untuk memberikan pengalaman fotografi yang tak terlupakan, dengan latar belakang bunga edelweis yang mempesona. Terdapat juga ayunan, rumah pohon, jembatan, dan berbagai dekorasi unik lainnya yang dapat membuat setiap foto terlihat semakin menarik dan berkesan.
-                </p>
-              </div>
-              <div class="testimonial-slide">
-                <h3 class="spot-title">Pemandangan Gunung & Lembah</h3>
-                <p class="spot-description">
-                  Dari ketinggian sekitar 1.200 mdpl, tempat ini memberikan pemandangan spektakuler dari Gunung Agung serta lembah-lembah sekitarnya. Panorama alam yang begitu luas dan menakjubkan memberikan ketenangan bagi setiap orang yang datang. Keindahan alam yang alami dan tidak terjamah ini menjadi alasan banyak orang untuk datang berkunjung dan menikmati ketenangannya.
-                </p>
-              </div>
-              <div class="testimonial-slide">
-                <h3 class="spot-title">Area Camping Nyaman</h3>
-                <p class="spot-description">
-                  Bagi pecinta alam, area camping yang ada di tempat ini merupakan pilihan yang sempurna. Dengan lokasi yang sangat strategis, pengunjung dapat menikmati sunrise dan sunset yang sangat memukau. Tenda yang didirikan di sini memberikan kenyamanan, serta suasana tenang yang jarang ditemukan di tempat lain, menjadikan pengalaman berkemah di sini sangat berkesan.
-                </p>
-              </div>
-              <div class="testimonial-slide">
-                <h3 class="spot-title">Warung & Kafe</h3>
-                <p class="spot-description">
-                  Setelah menikmati keindahan alam, pengunjung dapat bersantai di warung dan kafe kecil yang ada di sekitar lokasi. Menyediakan berbagai makanan dan minuman ringan, kafe ini adalah tempat yang sempurna untuk beristirahat sambil menikmati pemandangan alam sekitar yang asri. Dengan suasana yang santai dan nyaman, kafe ini menjadi tempat yang menyenangkan untuk bercengkerama bersama teman atau keluarga.
-                </p>
-              </div>
-              <div class="testimonial-slide">
-                <h3 class="spot-title">Jalur Pendakian (Trekking)</h3>
-                <p class="spot-description">
-                  Jalur pendakian di tempat ini menawarkan pengalaman yang sangat memuaskan bagi para petualang. Rute yang menantang ini mengarah ke Bukit Asah dan Pura Lempuyang, dua tempat yang sangat populer di kalangan pendaki. Selain itu, pemandangan sekitar selama perjalanan juga sangat memukau, memberikan kesan tersendiri bagi setiap orang yang melaluinya.
-                </p>
-              </div>
-
-              <!-- Clone first -->
-              <div class="testimonial-slide">
-                <h3 class="spot-title">Hamparan Bunga Edelweis</h3>
-                <p class="spot-description">
-                  Hamparan bunga edelweis yang menakjubkan menjadi daya tarik utama di tempat ini. Dengan latar belakang pegunungan yang indah, taman ini memiliki ladang bunga edelweis (Anaphalis javanica) yang tumbuh subur dan menciptakan pemandangan alam yang memukau. Keindahan pemandangan ini sering kali membuat pengunjung merasa seperti berada di dunia yang berbeda, penuh dengan kedamaian dan keheningan.
-                </p>
-              </div>
+        <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+            <div data-aos="zoom-in" data-aos-duration="1000" class="aspect-w-16 aspect-h-7">
+                <img class="w-full object-cover rounded-xl max-h-[500px]" src="{{ asset('/images/gallery/gallery8.svg') }}" alt="Features Image">
             </div>
-          </div>
 
-          <!-- Navigasi panah -->
-          <div class="flex gap-4 mt-4">
-            <button onclick="prevSlide()" class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center hover:bg-orange-600 transition">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-              </svg>
-            </button>
-            <button onclick="nextSlide()" class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center hover:bg-orange-600 transition">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
-            </button>
-          </div>
+            <!-- Grid -->
+            <div class="mt-5 lg:mt-16 grid lg:grid-cols-3 gap-8 lg:gap-12 items-start">
+                <div data-aos="fade-right" data-aos-duration="1000" class="lg:col-span-1">
+                    <h2 class="font-bold text-2xl md:text-3xl text-[#2C3930] ">
+                        Kami Adalah Taman Edelweis Bali
+                    </h2>
+                    <p class="mt-2 md:mt-4 text-lg text-gray-600 text-justify">
+                        Kami mengundang Anda menikmati keindahan abadi. Jelajahi pesona bunga edelweis kami. Rasakan kedamaian alam yang menenangkan. Ciptakan kenangan tak terlupakan bersama kami.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <div class="flex items-start">
+                        <p data-aos="fade-left" data-aos-duration="1000" class="text-lg text-gray-600 leading-relaxed text-justify">
+                            Kami terus berupaya menjaga keindahan taman ini. Setiap sudut dirawat penuh dedikasi yang tinggi. Berbagai tantangan hadir dalam pelestarian alam. Kami menghadapinya dengan semangat tak pernah menyerah. Solusi inovatif terus kami kembangkan. Demi pengalaman terbaik bagi para pengunjung. Kami berkomitmen ciptakan lingkungan asri. Lingkungan itu sangat memanjakan mata Anda. Setiap bunga edelweis memiliki kisah unik. Kami merawatnya agar terus lestari. Pengelolaan taman ini sangatlah kompleks. Namun semangat kami tak pernah padam. Kami percaya pada keajaiban alam. Keajaiban itu perlu dijaga bersama-sama. Pengunjung dapat belajar banyak dari sini.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- End Grid -->
         </div>
-      </div>
     </section>
-
-    <script>
-      const track = document.getElementById("testimonialTrack");
-      const slides = document.querySelectorAll(".testimonial-slide");
-      const totalSlides = slides.length;
-      let index = 1;
-
-      const updatePosition = () => {
-        track.style.transform = `translateX(-${index * 100}%)`;
-      };
-
-      const nextSlide = () => {
-        if (index >= totalSlides - 1) {
-          index++;
-          updatePosition();
-          setTimeout(() => {
-            track.style.transition = "none";
-            index = 1;
-            updatePosition();
-            void track.offsetWidth; // trigger reflow
-            track.style.transition = "transform 5s ease-in-out";
-          }, 2000);
-        } else {
-          index++;
-          updatePosition();
-        }
-      };
-
-      const prevSlide = () => {
-        if (index <= 0) {
-          index--;
-          updatePosition();
-          setTimeout(() => {
-            track.style.transition = "none";
-            index = totalSlides - 2;
-            updatePosition();
-            void track.offsetWidth;
-            track.style.transition = "transform 5s ease-in-out";
-          }, 2000);
-        } else {
-          index--;
-          updatePosition();
-        }
-      };
-
-      updatePosition();
-      setInterval(nextSlide, 10000); // Ganti slide tiap 15 detik
-    </script>
 
 
     <!-- Halaman Location -->
-    <section class="relative w-full h-screen bg-white p-10 mb-12">
+    <section id="location" class="relative w-full h-screen bg-white p-10 mb-12">
         <!-- Map Container -->
         <div class="w-full h-full relative">
             <!-- Google Maps Iframe -->
@@ -376,11 +232,11 @@
             </div>
     </section>
 
-<!-- Tombol Chatbot -->
-<button id="chatbot-toggle-btn"
-class="fixed bottom-4 right-6 bg-[#2C3930] hover:bg-[#364c3d] text-white p-3 rounded-full shadow-lg transition duration-300 ease-in-out z-50"
-aria-label="Chatbot">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+    <!-- Tombol Chatbot -->
+    <button id="chatbot-toggle-btn"
+    class="fixed bottom-4 right-6 bg-[#2C3930] hover:bg-[#364c3d] text-white p-3 rounded-full shadow-lg transition duration-300 ease-in-out z-50"
+    aria-label="Chatbot">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
             stroke="currentColor" class="w-10 h-10">
             <path stroke-linecap="round" stroke-linejoin="round"
             d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
@@ -463,33 +319,26 @@ aria-label="Chatbot">
         </div>
 
         <!-- Halaman Gallery -->
-        <section id="" class="relative mt-10 w-full h-auto">
+        <section id="gallery" class="relative mt-10 w-full h-auto">
             <div class="text-center my-5">
                 <h1 class="text-[48px] font-semibold text-[#2C3930]">Gallery</h1>
                 <p class="text-xl">Keindahan Alam yang ada pada kami dari dulu sampai saat ini</p>
             </div>
-            <div class="max-w-7xl mx-auto px-4 py-2 mb-24">
+            <div class="max-w-6xl mx-auto px-4 py-2 mb-24">
                 <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-3 space-y-3">
                     @foreach ([
-                        'gallery2.svg',
-                        'gallery3.svg',
-                        'gallery4.svg',
-                        'gallery5.svg',
-                        'gallery6.svg',
+                        'gallery.svg',
                         'gallery1.svg',
                         'gallery2.svg',
                         'gallery3.svg',
-                        'gallery5.svg',
-                        'gallery2.svg',
-                        'gallery3.svg',
+                        'gallery10.svg',
                         'gallery4.svg',
                         'gallery5.svg',
-                        'gallery3.svg',
-                        'gallery4.svg',
-                        'gallery5.svg',
-                        'gallery3.svg',
-                        'gallery4.svg',
-                        'gallery5.svg',
+                        'gallery6.svg',
+                        'gallery8.svg',
+                        'gallery9.svg',
+                        'gallery11.svg',
+
                         ]
                     as $image)
                     <div class="break-inside-avoid overflow-hidden shadow hover:shadow-lg transition">
@@ -502,7 +351,7 @@ aria-label="Chatbot">
         </section>
 
         <!--- Halaman Tiket --->
-        <section class="relative bg-white mt-24 mb-16">
+        <section id="ticket" class="relative bg-white mt-24 mb-16">
             <div class="w-full h-auto max-w-6xl mx-auto flex flex-col justify-center items-center">
                 <h1 class="text-[40px] md:text-[48px] text-[#2C3930] font-semibold">Ticket</h1>
                 <h2 class="text-[16px] md:text-[20px] text-[#2C3930] font-semibold mb-8">Lorem ipsum dolor sit amet.</h2>

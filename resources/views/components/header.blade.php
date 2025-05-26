@@ -21,8 +21,8 @@
         <a href="{{ url('/#') }}" class="text-sb/6 font-semibold relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-green-950 after:transition-all after:duration-300 hover:after:w-full"">Home</a>
         <a href="{{ url('/#about') }}" class="text-sb/6 font-semibold relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-green-950 after:transition-all after:duration-300 hover:after:w-full"">About</a>
         <a href="{{ url('/#location') }}" class="text-sb/6 font-semibold relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-green-950 after:transition-all after:duration-300 hover:after:w-full"">Location</a>
-        <a href="{{ url('/tiket') }}" class="text-sb/6 font-semibold relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-green-950 after:transition-all after:duration-300 hover:after:w-full"">Ticket</a>
-        <a href="{{ url('/#location') }}" class="text-sb/6 font-semibold relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-green-950 after:transition-all after:duration-300 hover:after:w-full"">Gallery</a>
+        <a href="{{ url('/#gallery') }}" class="text-sb/6 font-semibold relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-green-950 after:transition-all after:duration-300 hover:after:w-full"">Gallery</a>
+        <a href="{{ url('/#ticket') }}" class="text-sb/6 font-semibold relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-green-950 after:transition-all after:duration-300 hover:after:w-full"">Ticket</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         <a href="/login" class="text-sb/6 font-semibold text-[#2C3930] relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-green-950 after:transition-all after:duration-300 hover:after:w-full"">Login</a>
