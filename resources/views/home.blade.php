@@ -41,11 +41,11 @@
     </section>
 
     <!-- Fade-out ke bawah -->
-    <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-transparent to-white z-10"></div>
+    <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-transparent to-white"></div>
 
-    <!-- Halaman About -->
+    <!-- Halaman Features -->
     <section>
-        <div class="bg-white py-12 sm:py-20">
+        <div class="bg-white py-12 sm:py-20 z-10">
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
                 <div data-aos="fade-up" data-aos-duration="1000" class="mx-auto max-w-3xl lg:text-center">
                     <p
@@ -129,37 +129,44 @@
     </section>
 
     <!-- Halaman About -->
-    <section id="about">
-        <div data-aos="fade-up" data-aos-duration="1000" class="mx-auto lg:text-center mt-12">
-            <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-[#2C3930] sm:text-5xl lg:text-balance">
-                About Us
-            </p>
-        </div>
-        <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-            <div data-aos="zoom-in" data-aos-duration="1000" class="aspect-w-16 aspect-h-7">
-                <img class="w-full object-cover rounded-xl max-h-[500px]" src="{{ asset('/images/gallery/gallery8.svg') }}" alt="Features Image">
+    <section id="about" class="bg-gray-100 py-20 relative z-10">
+        <div class="container mx-auto px-4">
+            <div data-aos="fade-up" data-aos-duration="1000" class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-semibold text-[#2C3930] mb-4">
+                    About Us
+                </h2>
             </div>
 
-            <!-- Grid -->
-            <div class="mt-5 lg:mt-16 grid lg:grid-cols-3 gap-8 lg:gap-12 items-start">
-                <div data-aos="fade-right" data-aos-duration="1000" class="lg:col-span-1">
-                    <h2 class="font-bold text-2xl md:text-3xl text-[#2C3930] ">
-                        Kami Adalah Taman Edelweis Bali
-                    </h2>
-                    <p class="mt-2 md:mt-4 text-lg text-gray-600 text-justify">
-                        Kami mengundang Anda menikmati keindahan abadi. Jelajahi pesona bunga edelweis kami. Rasakan kedamaian alam yang menenangkan. Ciptakan kenangan tak terlupakan bersama kami.
-                    </p>
+            <div class="max-w-7xl mx-auto">
+                <!-- Image dengan fallback -->
+                <div data-aos="zoom-in" data-aos-duration="1000" class="mb-12">
+                    <div class="w-full h-[400px] bg-gray-200 rounded-xl overflow-hidden shadow-lg">
+                        <img class="w-full h-full object-cover"
+                             src="{{ asset('/images/gallery/gallery8.svg') }}"
+                             alt="Taman Edelweis Bali"
+                             onload="this.parentElement.classList.remove('bg-gray-200')"
+                             onerror="this.parentElement.innerHTML='<div class=\'flex items-center justify-center h-full text-gray-500\'>Image not found</div>'">
+                    </div>
                 </div>
 
-                <div class="lg:col-span-2">
-                    <div class="flex items-start">
-                        <p data-aos="fade-left" data-aos-duration="1000" class="text-lg text-gray-600 leading-relaxed text-justify">
+                <!-- Content Grid -->
+                <div class="grid lg:grid-cols-3 gap-8 lg:gap-12">
+                    <div data-aos="fade-right" data-aos-duration="1000" class="lg:col-span-1">
+                        <h3 class="font-bold text-2xl md:text-3xl text-[#2C3930] mb-4">
+                            Kami Adalah Taman Edelweis Bali
+                        </h3>
+                        <p class="text-lg text-gray-700 text-justify leading-relaxed">
+                            Kami mengundang Anda menikmati keindahan abadi. Jelajahi pesona bunga edelweis kami. Rasakan kedamaian alam yang menenangkan. Ciptakan kenangan tak terlupakan bersama kami.
+                        </p>
+                    </div>
+
+                    <div class="lg:col-span-2">
+                        <p data-aos="fade-left" data-aos-duration="1000" class="text-lg text-gray-700 leading-relaxed text-justify">
                             Kami terus berupaya menjaga keindahan taman ini. Setiap sudut dirawat penuh dedikasi yang tinggi. Berbagai tantangan hadir dalam pelestarian alam. Kami menghadapinya dengan semangat tak pernah menyerah. Solusi inovatif terus kami kembangkan. Demi pengalaman terbaik bagi para pengunjung. Kami berkomitmen ciptakan lingkungan asri. Lingkungan itu sangat memanjakan mata Anda. Setiap bunga edelweis memiliki kisah unik. Kami merawatnya agar terus lestari. Pengelolaan taman ini sangatlah kompleks. Namun semangat kami tak pernah padam. Kami percaya pada keajaiban alam. Keajaiban itu perlu dijaga bersama-sama. Pengunjung dapat belajar banyak dari sini.
                         </p>
                     </div>
                 </div>
             </div>
-            <!-- End Grid -->
         </div>
     </section>
 
@@ -459,6 +466,7 @@
 </div>
 
     <script>
+      const toggleBtn = document.getElementById("chatbot-toggle-btn");
       const popup = document.getElementById("chatbot-popup");
 
         toggleBtn.addEventListener("click", () => {
@@ -475,6 +483,16 @@
                     popup.classList.add("hidden");
                 }, 300);
             }
+        });
+    </script>
+
+    <!-- Initialize AOS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
         });
     </script>
 
