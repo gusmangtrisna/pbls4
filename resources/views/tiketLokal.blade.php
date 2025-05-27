@@ -35,11 +35,11 @@
                                         <path d="M4 20c0-2.21 3.582-4 8-4s8 1.79 8 4" />
                                     </svg>
                                     <div>
-                                        <div class="font-semibold text-[16px]">Adult</div>
+                                        <div class="font-semibold text-[16px]">Dewasa</div>
                                     </div>
                                 </div>
                                 <div class="flex justify-between items-center mt-2">
-                                    <span class="text-[15px] font-semibold text-gray-700">Rp 100.000</span>
+                                    <span class="text-[15px] font-semibold text-gray-700">Rp 30.000</span>
                                     <div class="flex items-center gap-2">
                                         <button type="button" onclick="changeQty('adult', -1)"
                                             class="bg-[#DDDDDD] rounded w-8 h-8 flex items-center justify-center">
@@ -76,11 +76,11 @@
                                         <path d="M22 20c0-2-3-4-7-4" />
                                     </svg>
                                     <div>
-                                        <div class="font-semibold text-[16px]">Kids</div>
+                                        <div class="font-semibold text-[16px]">Anak-anak</div>
                                     </div>
                                 </div>
                                 <div class="flex justify-between items-center mt-2">
-                                    <span class="text-[15px] font-semibold text-gray-700">Rp 50.000</span>
+                                    <span class="text-[15px] font-semibold text-gray-700">Rp 20.000</span>
                                     <div class="flex items-center gap-2">
                                         <button type="button" onclick="changeQty('kids', -1)"
                                             class="bg-[#DDDDDD] rounded w-8 h-8 flex items-center justify-center">
@@ -109,7 +109,7 @@
 
                         <!-- Nama -->
                         <input type="text" name="nama" id="nama" placeholder="Nama"
-                            class="pl-3 bg-white border w-full h-[40px] rounded" required>
+                            class="pl-3 bg-white border w-full h-[40px] rounded">
 
                         <!-- Tanggal -->
                         <div class="relative flex items-center bg-white border w-full h-[40px] px-4 rounded">
@@ -145,15 +145,15 @@
         function changeQty(id, delta) {
             const input = document.getElementById(id);
             let val = parseInt(input.value) || 0;
-            val += delta;
+            val += delta; // val = val + delta
             if (val < 0) val = 0;
             input.value = val;
             updateTotal();
         }
 
         function updateTotal() {
-            const priceAdult = 100000;
-            const priceKids = 50000;
+            const priceAdult = 30000;
+            const priceKids = 20000;
             const adult = parseInt(document.getElementById('adult').value) || 0;
             const kids = parseInt(document.getElementById('kids').value) || 0;
             const total = (adult * priceAdult) + (kids * priceKids);

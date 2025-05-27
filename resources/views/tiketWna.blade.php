@@ -19,7 +19,7 @@
                 </div>
 
                 <!-- Sub Judul -->
-                <div class="mb-3 font-bold text-[18px] text-center md:text-left">Pilih Tiket</div>
+                <div class="mb-3 font-bold text-[18px] text-center md:text-left">Chose Ticket</div>
 
                 <form action="/tiket" method="POST" onsubmit="return validateForm()">
                     @csrf
@@ -39,7 +39,7 @@
                                     </div>
                                 </div>
                                 <div class="flex justify-between items-center mt-2">
-                                    <span class="text-[15px] font-semibold text-gray-700">Rp 100.000</span>
+                                    <span class="text-[15px] font-semibold text-gray-700">Rp 50.000</span>
                                     <div class="flex items-center gap-2">
                                         <button type="button" onclick="changeQty('adult', -1)"
                                             class="bg-[#DDDDDD] rounded w-8 h-8 flex items-center justify-center">
@@ -80,7 +80,7 @@
                                     </div>
                                 </div>
                                 <div class="flex justify-between items-center mt-2">
-                                    <span class="text-[15px] font-semibold text-gray-700">Rp 50.000</span>
+                                    <span class="text-[15px] font-semibold text-gray-700">Rp 30.000</span>
                                     <div class="flex items-center gap-2">
                                         <button type="button" onclick="changeQty('kids', -1)"
                                             class="bg-[#DDDDDD] rounded w-8 h-8 flex items-center justify-center">
@@ -109,7 +109,7 @@
 
                         <!-- Nama -->
                         <input type="text" name="nama" id="nama" placeholder="Nama"
-                            class="pl-3 bg-white border w-full h-[40px] rounded" required>
+                            class="pl-3 bg-white border w-full h-[40px] rounded">
 
                         <!-- Tanggal -->
                         <div class="relative flex items-center bg-white border w-full h-[40px] px-4 rounded">
@@ -152,8 +152,8 @@
         }
 
         function updateTotal() {
-            const priceAdult = 100000;
-            const priceKids = 50000;
+            const priceAdult = 50000;
+            const priceKids = 30000;
             const adult = parseInt(document.getElementById('adult').value) || 0;
             const kids = parseInt(document.getElementById('kids').value) || 0;
             const total = (adult * priceAdult) + (kids * priceKids);

@@ -1,8 +1,8 @@
 <header class="fixed inset-x-0 top-0 z-50 backdrop-blur-sm">
     <nav class="flex items-center justify-between p-6 lg:px-14" aria-label="Global">
       <div class="flex lg:flex-1">
-        <a href="#" class="-m-1.5 p-1.5">
-          <span class="sr-only">DANI PINGGE</span>
+        <a href="{{ url('/#') }}" class="-m-1.5 p-1.5">
+          <span class="sr-only">d</span>
             <div class="flex">
                 <img class="h-12 w-auto" src="/images/logo.svg" alt="">
                 <h1 class="text-[18px] text-[#2C3930] px-4 font-bold">TAMAN <br /> EDELWEIS</h1>
