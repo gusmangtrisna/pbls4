@@ -27,7 +27,7 @@
                         ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam
                         occaecat.</p>
                     <div class="mt-10 flex items-center justify-center gap-x-6">
-                        <a href="#"
+                        <a href="{{ url('/#ticket') }}"
                             class="rounded-md bg-[#2C3930] px-5 py-3 text-base font-semibold text-white shadow-sm hover:bg-[#364c3d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2C3930]">Pesan
                             Tiket Masuk</a>
                     </div>
@@ -131,9 +131,10 @@
     <!-- Halaman About -->
     <section id="about">
         <div data-aos="fade-up" data-aos-duration="1000" class="mx-auto lg:text-center mt-12">
-            <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-[#2C3930] sm:text-5xl lg:text-balance">
-                About Us Blablabla
-            </p>
+            <h1 class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-[#2C3930] sm:text-5xl lg:text-balance">
+                About Us
+            </h1>
+            <p class="text-lg text-gray-600 mt-2">Kenali kami lebih dalam</p>
         </div>
         <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
             <div data-aos="zoom-in" data-aos-duration="1000" class="aspect-w-16 aspect-h-7">
@@ -165,9 +166,16 @@
 
 
     <!-- Halaman Location -->
-    <section class="relative w-full h-screen bg-white p-10 mb-12">
+    <section id="location" class="relative w-full h-auto max-w-12xl mx-auto bg-white mb-10 mt-16">
+        <div class="flex flex-col items-center justify-center mb-10" data-aos="fade-up" data-aos-duration="1000" class="mx-auto lg:text-center mt-12">
+            <h1 class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-[#2C3930] sm:text-5xl lg:text-balance">
+                Our Location
+            </h1>
+            <p class="text-lg text-gray-600 mt-2">Temukan keindahan alam kami di jantung Bali</p>
+        </div>
+
         <!-- Map Container -->
-        <div class="w-full h-full relative">
+        <div class="w-full h-full max-w-7xl mx-auto border border-black relative">
             <!-- Google Maps Iframe -->
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3947.328835881551!2d115.4633967!3d-8.3692776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd21db916c3b987%3A0x9edfee0513c3844!2sTaman%20Edelweis%20Bali!5e0!3m2!1sid!2sid!4v1746689104224!5m2!1sid!2sid"
@@ -235,130 +243,150 @@
     @php
     $isLoggedIn = Auth::check();
     @endphp
-    <!--- Halaman Tiket --->
-    <section class="relative bg-white mt-24 mb-16">
-        <div class="w-full h-auto max-w-6xl mx-auto flex flex-col justify-center items-center">
-            <h1 class="text-[40px] md:text-[48px] text-[#2C3930] font-semibold">Ticket</h1>
-            <h2 class="text-[16px] md:text-[20px] text-[#2C3930] font-semibold mb-8">Lorem ipsum dolor sit amet.</h2>
-            <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-8">
 
-                <!-- Tiket Domestik -->
-                <div class="w-full md:w-[500px] mx-auto h-auto p-5 border rounded-xl flex flex-col items-center justify-center gap-2 bg-white shadow">
-                    <h2 class="text-[20px] md:text-[24px] font-semibold text-center text-[#2C3930]">Tiket Domestik</h2>
-                    <p class="text-center text-[#9E9E9E] text-[16px] md:text-[18px] mb-5">Tiket untuk pengunjung domestik</p>
-                    <ul class="space-y-4 text-[15px] md:text-[17px] text-gray-600 pl-0 mb-9">
-                        <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            Warga Negara Indonesia (WNI)
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 11-4 0 2 2 0 014 0zM17 21v-2a4 4 0 00-8 0v2"/>
-                            </svg>
-                            Menunjukkan identitas resmi (KTP/SIM/Pelajar)
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zm0 0V4m0 7v7"/>
-                            </svg>
-                            Pembayaran hanya melalui metode yang tersedia
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2"/>
-                            </svg>
-                            Tiket berlaku hanya untuk satu kali kunjungan
-                        </li>
-                    </ul>
-                    @if($isLoggedIn)
-                        <a href="{{ url('/tiketLokal') }}" class="flex justify-center items-center w-full h-[50px] bg-[#2C3930] rounded-3xl text-white font-semibold text-[16px] md:text-[18px] mt-4">Beli Tiket</a>
-                    @else
-                        <a href="{{ url('/tiketLokal') }}" class="flex justify-center items-center w-full h-[50px] bg-[#2C3930] hover:bg-[#364c3d] rounded-3xl text-white font-semibold text-[16px] md:text-[18px] mt-4">Login untuk membeli</a>
-                    @endif
-                </div>
+<!-- Include Chatbot Component -->
+@include('components.chatbot')
 
-                <!-- Tiket Foreigner -->
-                <div class="w-full md:w-[500px] mx-auto h-auto p-5 border rounded-xl flex flex-col items-center justify-center gap-2 bg-white shadow">
-                    <h2 class="text-[20px] md:text-[24px] font-semibold text-center text-[#2C3930]">Foreigner Ticket</h2>
-                    <p class="text-center text-[#9E9E9E] text-[16px] md:text-[18px] mb-5">Tickets for foreigner visitors</p>
-                    <ul class="space-y-4 text-[15px] md:text-[17px] text-gray-600 pl-0 mb-9">
-                        <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            Non-Indonesian citizens
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 11-4 0 2 2 0 014 0zM17 21v-2a4 4 0 00-8 0v2"/>
-                            </svg>
-                            Show valid passport or ID
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zm0 0V4m0 7v7"/>
-                            </svg>
-                            Payment via available methods only
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2"/>
-                            </svg>
-                            Ticket valid for single entry only
-                        </li>
-                    </ul>
-                    @if($isLoggedIn)
-                        <a href="{{ url('/tiketWna') }}" class="flex justify-center items-center w-full h-[50px] bg-[#2C3930] rounded-3xl font-semibold text-white text-[16px] md:text-[18px] mt-4">Buy Ticket</a>
-                    @else
-                        <a href="{{ url('/tiketWna') }}" class="flex justify-center items-center w-full h-[50px] bg-[#2C3930] hover:bg-[#364c3d] rounded-3xl font-semibold text-white text-[16px] md:text-[18px] mt-4">Login to buy</a>
-                    @endif
-                </div>
+<!-- Halaman Gallery -->
+<section id="gallery" class="relative mt-5 w-full h-auto">
+    <div data-aos="fade-up" data-aos-duration="1000" class="text-center my-5">
+        <h1 class="text-[48px] font-semibold text-[#2C3930]">Gallery</h1>
+        <p class="text-xl">Keindahan Alam yang ada pada kami dari dulu sampai saat ini</p>
+    </div>
+    <div data-aos="fade-up" data-aos-duration="1000" class="max-w-7xl mx-auto px-4 py-8 mb-10">
+        <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-3 space-y-3">
+            @foreach ([
+                'gallery2.svg',
+                'gallery3.svg',
+                'gallery4.svg',
+                'gallery5.svg',
+                'gallery6.svg',
+                'gallery1.svg',
+                'gallery2.svg',
+                'gallery3.svg',
+                'gallery5.svg',
+                'gallery2.svg',
+                'gallery3.svg',
+                'gallery4.svg',
+                'gallery5.svg',
+                'gallery6.svg',
+                'gallery1.svg',
+                'gallery2.svg',
+                'gallery3.svg',
+                'gallery5.svg',
+                'gallery5.svg']
+                as $image)
+            <div class="break-inside-avoid overflow-hidden shadow hover:shadow-lg transition">
+                <img src="{{ asset('images/gallery/' . $image) }}" alt="Galeri"
+                class="w-full h-auto block hover:scale-105 transition-transform duration-700">
             </div>
-        </div>
-    </section>
-
-    <div id="loginModal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
-        <div class="bg-white rounded-xl p-8 shadow-lg max-w-sm w-full">
-            <h2 class="text-xl font-bold mb-4 text-center">Login Dulu</h2>
-            <p class="mb-6 text-center text-gray-600">Anda harus login untuk membeli tiket.</p>
-            <a href="{{ url('/login') }}" class="block w-full text-center bg-[#2C3930] text-white rounded-lg py-3 font-semibold hover:bg-[#364c3d] transition mb-2">Login</a>
-            <button onclick="document.getElementById('loginModal').classList.add('hidden')" class="w-full py-2 rounded-lg border mt-2">Tutup</button>
+            @endforeach
         </div>
     </div>
+</section>
 
-    <!-- Tambahkan popup khusus tourist setelah popup login lokal -->
-    <div id="loginModalTourist" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
-        <div class="bg-white rounded-xl p-8 shadow-lg max-w-sm w-full">
-            <h2 class="text-xl font-bold mb-4 text-center">Please Login</h2>
-            <p class="mb-6 text-center text-gray-600">You must login to buy a ticket.</p>
-            <a href="{{ url('/login') }}" class="block w-full text-center bg-[#2C3930] text-white rounded-lg py-3 font-semibold hover:bg-[#364c3d] transition mb-2">Login</a>
-            <button onclick="document.getElementById('loginModalTourist').classList.add('hidden')" class="w-full py-2 rounded-lg border mt-2">Close</button>
-        </div>
-    </div>
+<!--- Halaman Tiket --->
+<section id="ticket" class="relative bg-white mt-10 mb-16">
+    <div class="w-full h-auto max-w-6xl mx-auto flex flex-col justify-center items-center">
+        <h1 class="text-[40px] md:text-[48px] text-[#2C3930] font-semibold">Ticket</h1>
+        <h2 class="text-[16px] md:text-[20px] text-[#2C3930] mb-8">Dapatkan kesempatan berkunjung ke Taman Edelweis</h2>
+        <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-8">
 
+            <!-- Tiket Domestik -->
+            <div class="w-full md:w-[500px] mx-auto h-auto p-5 border rounded-xl flex flex-col items-center justify-center gap-2 bg-white shadow">
+                <h2 class="text-[20px] md:text-[24px] font-semibold text-center text-[#2C3930]">Tiket Domestik</h2>
+                <p class="text-center text-[#9E9E9E] text-[16px] md:text-[18px] mb-5">Tiket untuk pengunjung domestik</p>
+                <ul class="space-y-4 text-[15px] md:text-[17px] text-gray-600 pl-0 mb-9">
+                    <li class="flex items-start gap-2">
+                        <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        Warga Negara Indonesia (WNI)
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 11-4 0 2 2 0 014 0zM17 21v-2a4 4 0 00-8 0v2"/>
+                        </svg>
+                        Menunjukkan identitas resmi (KTP/SIM/Pelajar)
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <svg class="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zm0 0V4m0 7v7"/>
+                        </svg>
+                        Pembayaran hanya melalui metode yang tersedia
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <svg class="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2"/>
+                        </svg>
+                        Tiket berlaku hanya untuk satu kali kunjungan
+                    </li>
+                </ul>
+                @if($isLoggedIn)
+                    <a href="{{ url('/tiketLokal') }}" class="flex justify-center items-center w-full h-[50px] bg-[#2C3930] rounded-3xl text-white font-semibold text-[16px] md:text-[18px] mt-4">Beli Tiket</a>
+                @else
+                    <button type="button" onclick="document.getElementById('loginModal').classList.remove('hidden')" class="flex justify-center items-center w-full h-[50px] bg-[#2C3930] hover:bg-[#364c3d] rounded-3xl text-white font-semibold text-[16px] md:text-[18px] mt-4">Login untuk membeli</button>
+                @endif
+            </div>
 
-    <!-- Include Chatbot Component -->
-    @include('components.chatbot')
-
-    <!-- Halaman Gallery -->
-    <section id="" class="relative mt-10 w-full h-auto">
-        <div data-aos="fade-up" data-aos-duration="1000" class="text-center my-5">
-            <h1 class="text-[48px] font-semibold text-[#2C3930]">Gallery</h1>
-            <p class="text-xl">Keindahan Alam yang ada pada kami dari dulu sampai saat ini</p>
-        </div>
-        <div data-aos="fade-up" data-aos-duration="1000" class="max-w-7xl mx-auto px-4 py-8 mb-24">
-            <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-3 space-y-3">
-                @foreach (['gallery2.svg', 'gallery3.svg', 'gallery4.svg', 'gallery5.svg', 'gallery6.svg', 'gallery1.svg', 'gallery2.svg', 'gallery3.svg', 'gallery5.svg', 'gallery2.svg', 'gallery3.svg', 'gallery4.svg', 'gallery5.svg', 'gallery6.svg', 'gallery1.svg', 'gallery2.svg', 'gallery3.svg', 'gallery5.svg', 'gallery5.svg'] as $image)
-                    <div class="break-inside-avoid overflow-hidden shadow hover:shadow-lg transition">
-                        <img src="{{ asset('images/gallery/' . $image) }}" alt="Galeri"
-                            class="w-full h-auto block hover:scale-105 transition-transform duration-700">
-                    </div>
-                @endforeach
+            <!-- Tiket Foreigner -->
+            <div class="w-full md:w-[500px] mx-auto h-auto p-5 border rounded-xl flex flex-col items-center justify-center gap-2 bg-white shadow">
+                <h2 class="text-[20px] md:text-[24px] font-semibold text-center text-[#2C3930]">Foreigner Ticket</h2>
+                <p class="text-center text-[#9E9E9E] text-[16px] md:text-[18px] mb-5">Tickets for foreigner visitors</p>
+                <ul class="space-y-4 text-[15px] md:text-[17px] text-gray-600 pl-0 mb-9">
+                    <li class="flex items-start gap-2">
+                        <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        Non-Indonesian citizens
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 11-4 0 2 2 0 014 0zM17 21v-2a4 4 0 00-8 0v2"/>
+                        </svg>
+                        Show valid passport or ID
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <svg class="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zm0 0V4m0 7v7"/>
+                        </svg>
+                        Payment via available methods only
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <svg class="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2"/>
+                        </svg>
+                        Ticket valid for single entry only
+                    </li>
+                </ul>
+                @if($isLoggedIn)
+                    <a href="{{ url('/tiketWna') }}" class="flex justify-center items-center w-full h-[50px] bg-[#2C3930] rounded-3xl text-white font-semibold text-[16px] md:text-[18px] mt-4">Buy Ticket</a>
+                @else
+                    <button type="button" onclick="document.getElementById('loginModalTourist').classList.remove('hidden')" class="flex justify-center items-center w-full h-[50px] bg-[#2C3930] hover:bg-[#364c3d] rounded-3xl text-white font-semibold text-[16px] md:text-[18px] mt-4">Login to buy</button>
+                @endif
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<div id="loginModal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-xl p-8 shadow-lg max-w-sm w-full">
+        <h2 class="text-xl font-bold mb-4 text-center">Login Dulu</h2>
+        <p class="mb-6 text-center text-gray-600">Anda harus login untuk membeli tiket.</p>
+        <a href="{{ url('/login') }}" class="block w-full text-center bg-[#2C3930] text-white rounded-lg py-3 font-semibold hover:bg-[#364c3d] transition mb-2">Login</a>
+        <button onclick="document.getElementById('loginModal').classList.add('hidden')" class="w-full py-2 rounded-lg border mt-2">Tutup</button>
+    </div>
+</div>
+
+<!-- Tambahkan popup khusus tourist setelah popup login lokal -->
+<div id="loginModalTourist" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-xl p-8 shadow-lg max-w-sm w-full">
+        <h2 class="text-xl font-bold mb-4 text-center">Please Login</h2>
+        <p class="mb-6 text-center text-gray-600">You must login to buy a ticket.</p>
+        <a href="{{ url('/login') }}" class="block w-full text-center bg-[#2C3930] text-white rounded-lg py-3 font-semibold hover:bg-[#364c3d] transition mb-2">Login</a>
+        <button onclick="document.getElementById('loginModalTourist').classList.add('hidden')" class="w-full py-2 rounded-lg border mt-2">Close</button>
+    </div>
+</div>
 
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>AOS.init();</script>

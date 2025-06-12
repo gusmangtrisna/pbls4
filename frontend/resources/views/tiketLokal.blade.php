@@ -8,51 +8,52 @@
 
 <body class="overflow-hidden">
     <div class="absolute inset-0 bg-cover bg-center opacity-15"
-        style="background-image: url('{{ asset('/images/background.svg') }}');"></div>
+        style="background-image: url('{{ asset('/images/background.svg') }}');">
+    </div>
 
     <div class="w-full min-h-screen flex items-center justify-center px-4">
         <div class="relative w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl">
-            <!-- ↓ Ubah mt-32 ke mt-20 atau mt-16 -->
-            <div class="bg-white border rounded-[8px] px-4 sm:px-6 md:px-10 mt-20 py-8 shadow-md">
+            <!-- Card lebih kecil, turun sedikit, dan tidak menempel atas/bawah -->
+            <div class="bg-white border rounded-[12px] px-3 sm:px-5 md:px-8 shadow-lg pt-7 pb-7 mt-28 mb-10">
                 <div class="text-center mb-6">
-                    <h1 class="text-[28px] md:text-[32px] font-extrabold">TAMAN EDELWEIS BALI</h1>
+                    <h1 class="text-[24px] md:text-[28px] font-extrabold">TAMAN EDELWEIS BALI</h1>
                 </div>
 
                 <!-- Sub Judul -->
-                <div class="mb-3 font-bold text-[18px] text-center md:text-left">Pilih Tiket</div>
+                <div class="mb-3 font-bold text-[16px] text-center md:text-left">Pilih Tiket</div>
 
                 <form action="/tiket" method="POST" onsubmit="return validateForm()">
                     @csrf
-                    <div class="flex flex-col gap-6">
+                    <div class="flex flex-col gap-5">
                         <!-- Tiket Container -->
-                        <div class="flex flex-col md:flex-row gap-4">
+                        <div class="flex flex-col md:flex-row gap-3">
                             <!-- Adult -->
-                            <div class="flex-1 bg-white border rounded-xl p-4 shadow flex flex-col gap-2">
+                            <div class="flex-1 bg-white border rounded-xl p-3 shadow flex flex-col gap-2">
                                 <div class="flex items-center gap-3">
-                                    <svg class="w-10 h-10 text-[#2C3930]" fill="none" stroke="currentColor"
+                                    <svg class="w-8 h-8 text-[#2C3930]" fill="none" stroke="currentColor"
                                         stroke-width="2" viewBox="0 0 24 24">
                                         <circle cx="12" cy="8" r="4" />
                                         <path d="M4 20c0-2.21 3.582-4 8-4s8 1.79 8 4" />
                                     </svg>
                                     <div>
-                                        <div class="font-semibold text-[16px]">Dewasa</div>
+                                        <div class="font-semibold text-[15px]">Dewasa</div>
                                     </div>
                                 </div>
                                 <div class="flex justify-between items-center mt-2">
-                                    <span class="text-[15px] font-semibold text-gray-700">Rp 100.000</span>
+                                    <span class="text-[14px] font-semibold text-gray-700">Rp 100.000</span>
                                     <div class="flex items-center gap-2">
                                         <button type="button" onclick="changeQty('adult', -1)"
-                                            class="bg-[#DDDDDD] rounded w-8 h-8 flex items-center justify-center">
-                                            <svg width="20" height="20" viewBox="0 0 25 25" fill="none">
+                                            class="bg-[#DDDDDD] rounded w-7 h-7 flex items-center justify-center">
+                                            <svg width="18" height="18" viewBox="0 0 25 25" fill="none">
                                                 <path d="M19.79 13.54H5.21v-2.08H19.79v2.08Z" fill="black" />
                                             </svg>
                                         </button>
                                         <input type="text" id="adult" name="adult" value="0"
                                             pattern="[0-9]*" inputmode="numeric"
-                                            class="w-10 h-8 text-center font-bold border rounded" />
+                                            class="w-8 h-7 text-center font-bold border rounded" />
                                         <button type="button" onclick="changeQty('adult', 1)"
-                                            class="bg-[#DDDDDD] rounded w-8 h-8 flex items-center justify-center">
-                                            <svg width="20" height="20" viewBox="0 0 25 25" fill="none">
+                                            class="bg-[#DDDDDD] rounded w-7 h-7 flex items-center justify-center">
+                                            <svg width="18" height="18" viewBox="0 0 25 25" fill="none">
                                                 <path
                                                     d="M19.79 13.54H13.54V19.79H11.46V13.54H5.21v-2.08h6.25V5.21h2.08v6.25H19.79v2.08Z"
                                                     fill="black" />
@@ -60,15 +61,15 @@
                                         </button>
                                     </div>
                                 </div>
-                                <div class="text-[13px] text-gray-500 border-t pt-2 mt-2">
+                                <div class="text-[12px] text-gray-500 border-t pt-2 mt-2">
                                     Dapatkan 1 E-Tiket untuk pengunjung dewasa pada tanggal yang dipilih
                                 </div>
                             </div>
 
                             <!-- Kids -->
-                            <div class="flex-1 bg-white border rounded-xl p-4 shadow flex flex-col gap-2">
+                            <div class="flex-1 bg-white border rounded-xl p-3 shadow flex flex-col gap-2">
                                 <div class="flex items-center gap-3">
-                                    <svg class="w-10 h-10 text-[#2C3930]" fill="none" stroke="currentColor"
+                                    <svg class="w-8 h-8 text-[#2C3930]" fill="none" stroke="currentColor"
                                         stroke-width="2" viewBox="0 0 24 24">
                                         <circle cx="9" cy="8" r="3" />
                                         <circle cx="17" cy="8" r="3" />
@@ -76,24 +77,24 @@
                                         <path d="M22 20c0-2-3-4-7-4" />
                                     </svg>
                                     <div>
-                                        <div class="font-semibold text-[16px]">Anak-anak</div>
+                                        <div class="font-semibold text-[15px]">Anak-anak</div>
                                     </div>
                                 </div>
                                 <div class="flex justify-between items-center mt-2">
-                                    <span class="text-[15px] font-semibold text-gray-700">Rp 50.000</span>
+                                    <span class="text-[14px] font-semibold text-gray-700">Rp 50.000</span>
                                     <div class="flex items-center gap-2">
                                         <button type="button" onclick="changeQty('kids', -1)"
-                                            class="bg-[#DDDDDD] rounded w-8 h-8 flex items-center justify-center">
-                                            <svg width="20" height="20" viewBox="0 0 25 25" fill="none">
+                                            class="bg-[#DDDDDD] rounded w-7 h-7 flex items-center justify-center">
+                                            <svg width="18" height="18" viewBox="0 0 25 25" fill="none">
                                                 <path d="M19.79 13.54H5.21v-2.08H19.79v2.08Z" fill="black" />
                                             </svg>
                                         </button>
                                         <input type="text" id="kids" name="kids" value="0"
                                             pattern="[0-9]*" inputmode="numeric"
-                                            class="w-10 h-8 text-center font-bold border rounded" />
+                                            class="w-8 h-7 text-center font-bold border rounded" />
                                         <button type="button" onclick="changeQty('kids', 1)"
-                                            class="bg-[#DDDDDD] rounded w-8 h-8 flex items-center justify-center">
-                                            <svg width="20" height="20" viewBox="0 0 25 25" fill="none">
+                                            class="bg-[#DDDDDD] rounded w-7 h-7 flex items-center justify-center">
+                                            <svg width="18" height="18" viewBox="0 0 25 25" fill="none">
                                                 <path
                                                     d="M19.79 13.54H13.54V19.79H11.46V13.54H5.21v-2.08h6.25V5.21h2.08v6.25H19.79v2.08Z"
                                                     fill="black" />
@@ -101,7 +102,7 @@
                                         </button>
                                     </div>
                                 </div>
-                                <div class="text-[13px] text-gray-500 border-t pt-2 mt-2">
+                                <div class="text-[12px] text-gray-500 border-t pt-2 mt-2">
                                     Dapatkan 1 E-Tiket untuk pengunjung anak anak pada tanggal yang dipilih
                                 </div>
                             </div>
@@ -109,11 +110,11 @@
 
                         <!-- Nama -->
                         <input type="text" name="nama" id="nama" placeholder="Nama"
-                            class="pl-3 bg-white border w-full h-[40px] rounded" required>
+                            class="pl-3 bg-white border w-full h-[36px] rounded" required>
 
                         <!-- Tanggal -->
-                        <div class="relative flex items-center bg-white border w-full h-[40px] px-4 rounded">
-                            <svg width="20" height="20"
+                        <div class="relative flex items-center bg-white border w-full h-[36px] px-4 rounded">
+                            <svg width="18" height="18"
                                 class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400"
                                 fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <rect x="3" y="4" width="18" height="16" rx="2"
@@ -126,15 +127,15 @@
 
                         <!-- Total -->
                         <div id="total-container"
-                            class="pl-3 bg-white border w-full h-[40px] rounded flex items-center text-[16px] text-gray-700">
+                            class="pl-3 bg-white border w-full h-[36px] rounded flex items-center text-[15px] text-gray-700">
                             Total
                         </div>
                     </div>
 
-                    <div class="mt-8 text-center">
+                    <div class="mt-6 text-center">
                         <button type="submit"
-                            class="w-[250px] h-[40px] bg-[#2C3930] text-[20px] rounded-lg font-bold text-white">Confirm</button>
-                        <p class="text-[#8C8C8C] font-semibold text-[13px] mt-1">Pastikan keamanan pembayaran anda</p>
+                            class="w-[200px] h-[36px] bg-[#2C3930] text-[18px] rounded-lg font-bold text-white">Confirm</button>
+                        <p class="text-[#8C8C8C] font-semibold text-[12px] mt-1">Pastikan keamanan pembayaran anda</p>
                     </div>
                 </form>
             </div>

@@ -2,7 +2,7 @@
     <nav class="flex items-center justify-between p-6 lg:px-14" aria-label="Global">
       <div class="flex lg:flex-1">
         <a href="#" class="-m-1.5 p-1.5">
-          <span class="sr-only">DANI PINGGE</span>
+          <span class="sr-only"></span>
             <div class="flex">
                 <img class="h-12 w-auto" src="/images/logo.svg" alt="">
                 <h1 class="text-[18px] text-[#2C3930] px-4 font-bold">TAMAN <br /> EDELWEIS</h1>
@@ -20,9 +20,9 @@
       <div class="hidden lg:flex lg:gap-x-12 text-[#2C3930]">
         <a href="{{ url('/#home') }}" class="text-sb/6 font-semibold relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-green-950 after:transition-all after:duration-300 hover:after:w-full"">Home</a>
         <a href="{{ url('/#about') }}" class="text-sb/6 font-semibold relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-green-950 after:transition-all after:duration-300 hover:after:w-full"">About</a>
-        <a href="#" class="text-sb/6 font-semibold relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-green-950 after:transition-all after:duration-300 hover:after:w-full"">Location</a>
-        <a href="#" class="text-sb/6 font-semibold relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-green-950 after:transition-all after:duration-300 hover:after:w-full"">Ticket</a>
-        <a href="#" class="text-sb/6 font-semibold relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-green-950 after:transition-all after:duration-300 hover:after:w-full"">Gallery</a>
+        <a href="{{ url('/#location') }}" class="text-sb/6 font-semibold relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-green-950 after:transition-all after:duration-300 hover:after:w-full"">Location</a>
+        <a href="{{ url('/#gallery') }}" class="text-sb/6 font-semibold relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-green-950 after:transition-all after:duration-300 hover:after:w-full"">Gallery</a>
+        <a href="{{ url('/#ticket') }}" class="text-sb/6 font-semibold relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-green-950 after:transition-all after:duration-300 hover:after:w-full"">Ticket</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         <a href="/login" class="text-sb/6 font-semibold text-[#2C3930] relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-green-950 after:transition-all after:duration-300 hover:after:w-full"">Login</a>

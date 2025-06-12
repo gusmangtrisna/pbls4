@@ -9,7 +9,7 @@
 </button>
 
 <div id="chatbot-popup"
-    class="hidden fixed bottom-[calc(4rem+1.5rem)] right-0 mr-6 bg-white p-6 rounded-lg border border-[#e5e7eb] w-[500px] h-[610px] z-[9998] transition-all duration-300 ease-in-out transform scale-95 opacity-0 md:flex flex-col shadow-lg"
+    class="hidden fixed bottom-[calc(4rem+1.5rem)] right-0 mr-6 bg-white p-6 rounded-lg border border-[#e5e7eb] w-[500px] h-[450px] z-[9998] transition-all duration-300 ease-in-out transform scale-95 opacity-0 md:flex flex-col shadow-lg"
     style="box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);">
 
     <div class="flex flex-col space-y-1.5 pb-4 border-b">
@@ -65,7 +65,7 @@
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         let chatHistory = [];
-        const API_URL = 'http://localhost:8080';
+        const API_URL = 'http://localhost:7000';
 
         marked.setOptions({
             breaks: true,

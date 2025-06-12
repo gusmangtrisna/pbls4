@@ -23,7 +23,7 @@ cp .env.example .env
 Development mode dengan auto-reload:
 
 ```bash
-uvicorn main:app --reload
+uvicorn main:app --reload --port 7000
 ```
 
 Atau gunakan script yang sudah disediakan:

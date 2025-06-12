@@ -25,3 +25,7 @@ Route::get('/tiketWna', function () {
 Route::get('/tiketLokal', function () {
     return view('tiketLokal');
 });
+
+Route::get('/tiketWna', function () {
+    return view('tiketWna');
+});
