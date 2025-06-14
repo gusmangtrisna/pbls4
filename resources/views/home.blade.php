@@ -8,6 +8,11 @@
     <style>
         html {
             scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            overflow-x: hidden;
         }
     </style>
 </head>
@@ -20,12 +25,12 @@
             <div class="mx-auto max-w-2xl py-18 sm:py-24 lg:py-48">
                 <div class="hidden sm:mb-8 sm:flex sm:justify-center">
                 </div>
-                <div class="text-center">
+                <div data-aos="fade-up" data-aos-duration="1000" class="text-center">
                     <h1 class="text-balance text-5xl font-semibold tracking-tight text-[#2C3930] sm:text-7xl">Selamat
                         Datang di Taman Edelweis</h1>
-                    <p class="mt-8 text-pretty text-lg font-medium text-gray-900 sm:text-xl/8">Anim aute id magna aliqua
-                        ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam
-                        occaecat.</p>
+                    <p class="mt-8 text-pretty text-lg font-medium text-gray-900 sm:text-xl/8">
+                        Nikmati keindahan alam Taman Edelweis Bali yang mempesona.
+                        Pesan tiket masukmu dengan mudah dan cepat melalui sistem ini.</p>
                     <div class="mt-10 flex items-center justify-center gap-x-6">
                         <a href="{{ url('/#ticket') }}"
                             class="rounded-md bg-[#2C3930] px-5 py-3 text-base font-semibold text-white shadow-sm hover:bg-[#364c3d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2C3930]">Pesan
@@ -129,7 +134,7 @@
     </section>
 
     <!-- Halaman About -->
-    <section id="about" class="bg-gray-100 py-20 relative z-10">
+    <section id="about" class="bg-white py-10 relative z-10">
         <div class="container mx-auto px-4">
             <div data-aos="fade-up" data-aos-duration="1000" class="text-center mb-12">
                 <h1 class="text-4xl md:text-5xl font-semibold text-[#2C3930] mb-4">
@@ -172,13 +177,20 @@
 
 
     <!-- Halaman Location -->
-    <section id="location" class="relative w-full h-screen bg-white p-10 mb-12">
-        <div class="flex flex-col justify-center items-center mt-12 mb-10">
-        <h1 class="text-4xl md:text-5xl font-semibold text-[#2C3930] mb-4">Location</h1>
-        <p class="text-2xl font-medium text-[#2C3930]">Kunjungi kami pada lokasi yang telah ditentukan</p>
+    <section id="location" class="relative w-full bg-white px-4 md:px-10 py-8 md:py-16">
+        <!-- MOBILE ONLY: px-4, py-8 -->
+        <!-- DESKTOP ONLY: md:px-10, md:py-16 -->
+        <div data-aos="fade-up" data-aos-duration="1000" class="flex flex-col justify-center items-center mb-6">
+            <h1 class="text-3xl md:text-5xl font-semibold text-[#2C3930] mb-2">Location</h1>
+            <!-- MOBILE ONLY: text-3xl -->
+            <!-- DESKTOP ONLY: md:text-5xl -->
+            <p class="text-base md:text-xl font-medium text-[#2C3930] text-center">Kunjungi kami pada lokasi yang telah ditentukan</p>
+            <!-- MOBILE ONLY: text-base -->
+            <!-- DESKTOP ONLY: md:text-xl -->
         </div>
-        <!-- Map Container -->
-        <div class="w-full h-full relative">
+        <div class="w-full h-[300px] md:h-[500px] relative rounded-lg overflow-hidden">
+            <!-- MOBILE ONLY: h-[300px] -->
+            <!-- DESKTOP ONLY: md:h-[500px] -->
             <!-- Google Maps Iframe -->
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3947.328835881551!2d115.4633967!3d-8.3692776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd21db916c3b987%3A0x9edfee0513c3844!2sTaman%20Edelweis%20Bali!5e0!3m2!1sid!2sid!4v1746689104224!5m2!1sid!2sid"
@@ -186,10 +198,10 @@
                 aria-hidden="false" tabindex="0" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
             <!-- Floating Info Card - Disesuaikan agar fleksibel ke bawah -->
-            <div
-                class="absolute right-10 top-24 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden flex flex-col">
+            <div data-aos="fade-left" data-aos-duration="1000"
+                class="absolute right-0 md:right-8 top-4 w-full md:w-80 mx-auto md:mx-0 max-w-sm bg-white/95 backdrop-blur rounded-lg shadow-lg border border-gray-200 overflow-hidden flex flex-col">
                 <!-- Card Header -->
-                <div class="bg-[#2C3930] p-6 text-white">
+                <div class="bg-[#2C3930] p-3 md:p-4 text-white">
                     <h2 class="text-2xl font-bold">Taman Edelweis Bali</h2>
                     <p class="text-white mt-1">Wisata Alam & Kebun Bunga</p>
                 </div>
@@ -205,7 +217,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M15 11a3 3 0 11-6 0 3 3 0 0 1 6 0z" />
                         </svg>
-                        <p class="text-gray-700">Jl. Raya Kintamani, Songan A, Kec. Kintamani, Kabupaten Bangli, Bali
+                        <p class="text-gray-700">Besakih, Banjar Temukus, Kabupaten Karangasem, Bali 80863
                         </p>
                     </div>
 
@@ -331,11 +343,11 @@
 
         <!-- Halaman Gallery -->
         <section id="gallery" class="relative mt-10 w-full h-auto">
-            <div class="text-center mt-48">
+            <div data-aos="fade-up" data-aos-duration="1000" class="text-center mt-48">
                 <h1 class="text-[48px] font-semibold text-[#2C3930]">Gallery</h1>
                 <p class="text-xl">Keindahan Alam yang ada pada kami dari dulu sampai saat ini</p>
             </div>
-            <div class="max-w-6xl mx-auto px-4 py-2 mb-24">
+            <div data-aos="fade-up" data-aos-duration="1000" class="max-w-6xl mx-auto px-4 py-2 mb-24">
                 <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-3 space-y-3">
                     @foreach ([
                         'gallery.svg',
@@ -367,17 +379,27 @@
 @endphp
 
 <!--- Halaman Tiket --->
-<section class="relative bg-white mt-24 mb-16">
-    <div class="w-full h-auto max-w-6xl mx-auto flex flex-col justify-center items-center">
-        <h1 class="text-[40px] md:text-[48px] text-[#2C3930] font-semibold">Ticket</h1>
-        <h2 class="text-[16px] md:text-[20px] text-[#2C3930] font-semibold mb-8">Lorem ipsum dolor sit amet.</h2>
-        <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-8">
+<section id="ticket" class="relative bg-white mt-24 mb-16 px-0 md:px-0">
+    <!-- RESPONSIVE (MOBILE & DESKTOP): px-0 untuk mobile, md:px-0 untuk desktop -->
+    <div class="w-full h-auto max-w-sm md:max-w-6xl mx-auto flex flex-col justify-center items-center bg-white px-5 md:px-0">
+        <!-- MOBILE ONLY: max-w-sm agar container lebih kecil di mobile, px-5 (padding 20px) agar border card terlihat jelas -->
+        <!-- DESKTOP ONLY: md:max-w-6xl md:px-0 -->
+        <!-- RESPONSIVE (MOBILE & DESKTOP): Judul tiket -->
+        <h1 data-aos="fade-up" data-aos-duration="1000" class="text-[28px] md:text-[48px] text-[#2C3930] font-semibold mb-2 md:mb-0">Ticket</h1>
+        <h2 data-aos="fade-up" data-aos-duration="1000" class="text-[13px] md:text-[20px] text-[#2C3930] font-semibold mb-6 md:mb-8 text-center px-2 md:px-4">Pesan tiket masuk Taman Edelweis Bali dengan mudah dan cepat!</h2>
+        <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 px-10 lg:px-0">
+            <!-- MOBILE ONLY: grid-cols-1, gap-4, px-0 untuk benar-benar compact -->
+            <!-- DESKTOP ONLY: md:grid-cols-2, md:gap-8, md:px-0 -->
 
             <!-- Tiket Domestik -->
-            <div class="w-full md:w-[500px] mx-auto h-auto p-5 border rounded-xl flex flex-col items-center justify-center gap-2 bg-white shadow">
-                <h2 class="text-[20px] md:text-[24px] font-semibold text-center text-[#2C3930]">Tiket Domestik</h2>
-                <p class="text-center text-[#9E9E9E] text-[16px] md:text-[18px] mb-5">Tiket untuk pengunjung domestik</p>
-                <ul class="space-y-4 text-[15px] md:text-[17px] text-gray-600 pl-0 mb-9">
+            <div data-aos="fade-right" data-aos-duration="1000"
+                class="w-full max-w-xs mx-auto md:w-full md:max-w-none h-auto p-3 md:p-5 border-4 border-[#2C3930] rounded-xl flex flex-col items-center justify-center gap-1 md:gap-2 bg-white shadow-none mb-8 md:mb-0">
+                <!-- DEBUG: border-4 border-red-600 agar border sangat jelas, shadow-none untuk debug -->
+                <!-- MOBILE ONLY: p-3, gap-1, mb-8 -->
+                <!-- DESKTOP ONLY: md:p-5, md:gap-2, md:mb-0 -->
+                <h2 class="text-[16px] md:text-[24px] font-semibold text-center text-[#2C3930]">Tiket Domestik</h2>
+                <p class="text-center text-[#9E9E9E] text-[13px] md:text-[18px] mb-3 md:mb-5">Tiket untuk pengunjung domestik</p>
+                <ul class="space-y-2 md:space-y-4 text-[13px] md:text-[17px] text-gray-600 pl-0 mb-5 md:mb-9">
                     <li class="flex items-start gap-2">
                         <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
@@ -404,17 +426,21 @@
                     </li>
                 </ul>
                 @if($isLoggedIn)
-                    <a href="{{ url('/tiketLokal') }}" class="flex justify-center items-center w-full h-[50px] bg-[#2C3930] rounded-3xl text-white font-semibold text-[16px] md:text-[18px] mt-4">Beli Tiket</a>
+                    <a href="{{ url('/tiketLokal') }}" class="flex justify-center items-center w-full h-[44px] md:h-[50px] bg-[#2C3930] rounded-3xl text-white font-semibold text-[15px] md:text-[18px] mt-auto">Beli Tiket</a>
                 @else
-                    <a href="{{ url('/tiketLokal') }}" class="flex justify-center items-center w-full h-[50px] bg-[#2C3930] hover:bg-[#364c3d] rounded-3xl text-white font-semibold text-[16px] md:text-[18px] mt-4">Login untuk membeli</a>
+                    <a href="{{ url('/tiketLokal') }}" class="flex justify-center items-center w-full h-[44px] md:h-[50px] bg-[#2C3930] hover:bg-[#364c3d] rounded-3xl text-white font-semibold text-[15px] md:text-[18px] mt-auto">Login untuk membeli</a>
                 @endif
             </div>
 
             <!-- Tiket Foreigner -->
-            <div class="w-full md:w-[500px] mx-auto h-auto p-5 border rounded-xl flex flex-col items-center justify-center gap-2 bg-white shadow">
-                <h2 class="text-[20px] md:text-[24px] font-semibold text-center text-[#2C3930]">Foreigner Ticket</h2>
-                <p class="text-center text-[#9E9E9E] text-[16px] md:text-[18px] mb-5">Tickets for foreigner visitors</p>
-                <ul class="space-y-4 text-[15px] md:text-[17px] text-gray-600 pl-0 mb-9">
+            <div data-aos="fade-left" data-aos-duration="1000"
+                class="w-full max-w-xs mx-auto md:w-full md:max-w-none h-auto p-3 md:p-5 border-4 border-[#2C3930] rounded-xl flex flex-col items-center justify-center gap-1 md:gap-2 bg-white shadow-none mb-8 md:mb-0">
+                <!-- DEBUG: border-4 border-red-600 agar border sangat jelas, shadow-none untuk debug -->
+                <!-- MOBILE ONLY: p-3, gap-1, mb-8 -->
+                <!-- DESKTOP ONLY: md:p-5, md:gap-2, md:mb-0 -->
+                <h2 class="text-[16px] md:text-[24px] font-semibold text-center text-[#2C3930]">Foreigner Ticket</h2>
+                <p class="text-center text-[#9E9E9E] text-[13px] md:text-[18px] mb-3 md:mb-5">Tickets for foreigner visitors</p>
+                <ul class="space-y-2 md:space-y-4 text-[13px] md:text-[17px] text-gray-600 pl-0 mb-5 md:mb-9">
                     <li class="flex items-start gap-2">
                         <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
@@ -441,9 +467,9 @@
                     </li>
                 </ul>
                 @if($isLoggedIn)
-                    <a href="{{ url('/tiketWna') }}" class="flex justify-center items-center w-full h-[50px] bg-[#2C3930] rounded-3xl font-semibold text-white text-[16px] md:text-[18px] mt-4">Buy Ticket</a>
+                    <a href="{{ url('/tiketWna') }}" class="flex justify-center items-center w-full h-[44px] md:h-[50px] bg-[#2C3930] rounded-3xl font-semibold text-white text-[15px] md:text-[18px] mt-auto">Buy Ticket</a>
                 @else
-                    <a href="{{ url('/tiketWna') }}" class="flex justify-center items-center w-full h-[50px] bg-[#2C3930] hover:bg-[#364c3d] rounded-3xl font-semibold text-white text-[16px] md:text-[18px] mt-4">Login to buy</a>
+                    <a href="{{ url('/tiketWna') }}" class="flex justify-center items-center w-full h-[44px] md:h-[50px] bg-[#2C3930] hover:bg-[#364c3d] rounded-3xl font-semibold text-white text-[15px] md:text-[18px] mt-auto">Login to buy</a>
                 @endif
             </div>
         </div>
@@ -495,7 +521,6 @@
     <script>
         AOS.init({
             duration: 1000,
-            once: true,
             offset: 100
         });
     </script>
